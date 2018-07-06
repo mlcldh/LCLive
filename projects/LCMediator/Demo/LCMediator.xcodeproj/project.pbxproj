@@ -13,9 +13,12 @@
 		8DCCE24520EF4C0A002EA6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE24420EF4C0A002EA6AE /* Assets.xcassets */; };
 		8DCCE24820EF4C0A002EA6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE24620EF4C0A002EA6AE /* LaunchScreen.storyboard */; };
 		8DCCE24B20EF4C0A002EA6AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE24A20EF4C0A002EA6AE /* main.m */; };
+		F77FC154F744AAA6C5E2AC70 /* libPods-LCMediator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB10B31DA72A22880B358DF9 /* libPods-LCMediator.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C021DCAC103375F4B3A7282 /* Pods-LCMediator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCMediator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCMediator/Pods-LCMediator.debug.xcconfig"; sourceTree = "<group>"; };
+		7E5CA383B2512CBFC07A1B02 /* Pods-LCMediator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCMediator.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCMediator/Pods-LCMediator.release.xcconfig"; sourceTree = "<group>"; };
 		8DCCE23820EF4C0A002EA6AE /* LCMediator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCMediator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCCE23B20EF4C0A002EA6AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DCCE23C20EF4C0A002EA6AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		8DCCE24720EF4C0A002EA6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DCCE24920EF4C0A002EA6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DCCE24A20EF4C0A002EA6AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB10B31DA72A22880B358DF9 /* libPods-LCMediator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCMediator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F77FC154F744AAA6C5E2AC70 /* libPods-LCMediator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				8DCCE23A20EF4C0A002EA6AE /* LCMediator */,
 				8DCCE23920EF4C0A002EA6AE /* Products */,
+				D8F5BCC61921FE87337A4101 /* Pods */,
+				F2B5F660EAE88BA513974593 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +78,23 @@
 			path = LCMediator;
 			sourceTree = "<group>";
 		};
+		D8F5BCC61921FE87337A4101 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C021DCAC103375F4B3A7282 /* Pods-LCMediator.debug.xcconfig */,
+				7E5CA383B2512CBFC07A1B02 /* Pods-LCMediator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F2B5F660EAE88BA513974593 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB10B31DA72A22880B358DF9 /* libPods-LCMediator.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DCCE24E20EF4C0A002EA6AE /* Build configuration list for PBXNativeTarget "LCMediator" */;
 			buildPhases = (
+				274D204EE309EC6229885AC6 /* [CP] Check Pods Manifest.lock */,
 				8DCCE23420EF4C0A002EA6AE /* Sources */,
 				8DCCE23520EF4C0A002EA6AE /* Frameworks */,
 				8DCCE23620EF4C0A002EA6AE /* Resources */,
@@ -136,6 +161,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		274D204EE309EC6229885AC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LCMediator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DCCE23420EF4C0A002EA6AE /* Sources */ = {
@@ -276,13 +322,15 @@
 		};
 		8DCCE24F20EF4C0A002EA6AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C021DCAC103375F4B3A7282 /* Pods-LCMediator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JG8HG83X27;
 				INFOPLIST_FILE = LCMediator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.menglingchao.LCMediator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.menglingchao.hehea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -290,13 +338,15 @@
 		};
 		8DCCE25020EF4C0A002EA6AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E5CA383B2512CBFC07A1B02 /* Pods-LCMediator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JG8HG83X27;
 				INFOPLIST_FILE = LCMediator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.menglingchao.LCMediator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.menglingchao.hehea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
