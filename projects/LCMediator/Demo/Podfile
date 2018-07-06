@@ -6,3 +6,6 @@ target:'LCMediator'
 
 
 pod 'Masonry'
+pod 'AFNetworking'
+
+pod 'LCMediator', :path => '../LCMediator'

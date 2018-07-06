@@ -1,15 +1,13 @@
 //
-//  ViewController.h
-//  LCMomment
+//  LCWebModule.h
+//  LCMediator
 //
 //  Created by MengLingChao on 2018/7/6.
 //  Copyright © 2018年 MengLingChao. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ViewController : UIViewController
-
+@protocol LCWebModule <NSObject>
 
 @end
-
