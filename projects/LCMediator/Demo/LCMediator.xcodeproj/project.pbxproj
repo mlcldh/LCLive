@@ -13,10 +13,11 @@
 		8DCCE24520EF4C0A002EA6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE24420EF4C0A002EA6AE /* Assets.xcassets */; };
 		8DCCE24820EF4C0A002EA6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE24620EF4C0A002EA6AE /* LaunchScreen.storyboard */; };
 		8DCCE24B20EF4C0A002EA6AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE24A20EF4C0A002EA6AE /* main.m */; };
-		F77FC154F744AAA6C5E2AC70 /* libPods-LCMediator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB10B31DA72A22880B358DF9 /* libPods-LCMediator.a */; };
+		EE954A2C5804DDE9819DE2BD /* Pods_LCMediator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E2308D68E98D99292911E2 /* Pods_LCMediator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29E2308D68E98D99292911E2 /* Pods_LCMediator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCMediator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C021DCAC103375F4B3A7282 /* Pods-LCMediator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCMediator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCMediator/Pods-LCMediator.debug.xcconfig"; sourceTree = "<group>"; };
 		7E5CA383B2512CBFC07A1B02 /* Pods-LCMediator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCMediator.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCMediator/Pods-LCMediator.release.xcconfig"; sourceTree = "<group>"; };
 		8DCCE23820EF4C0A002EA6AE /* LCMediator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCMediator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,7 +30,6 @@
 		8DCCE24720EF4C0A002EA6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DCCE24920EF4C0A002EA6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DCCE24A20EF4C0A002EA6AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FB10B31DA72A22880B358DF9 /* libPods-LCMediator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCMediator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F77FC154F744AAA6C5E2AC70 /* libPods-LCMediator.a in Frameworks */,
+				EE954A2C5804DDE9819DE2BD /* Pods_LCMediator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 		F2B5F660EAE88BA513974593 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FB10B31DA72A22880B358DF9 /* libPods-LCMediator.a */,
+				29E2308D68E98D99292911E2 /* Pods_LCMediator.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,6 +106,7 @@
 				8DCCE23420EF4C0A002EA6AE /* Sources */,
 				8DCCE23520EF4C0A002EA6AE /* Frameworks */,
 				8DCCE23620EF4C0A002EA6AE /* Resources */,
+				4110C17873242EAA138D8D3C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +180,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4110C17873242EAA138D8D3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LCMediator/Pods-LCMediator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCMediator/Pods-LCMediator-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

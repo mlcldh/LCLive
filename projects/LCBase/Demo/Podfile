@@ -8,5 +8,5 @@ target:'LCBase'
 pod 'Masonry'
 pod 'AFNetworking'
 
-pod 'LCBase', :path => '../LCBase'
+#pod 'LCBase', :path => '../LCBase'
 
