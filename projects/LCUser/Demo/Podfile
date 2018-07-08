@@ -1,0 +1,15 @@
+platform :ios, '8.0'
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'LCUser' do
+
+pod 'LCUser', :path => '../'
+pod 'LCMediator', :path => '../../LCMediator'
+pod 'LCBase', :path => '../../LCBase'
+
+pod 'AFNetworking'
+pod 'Masonry'
+
+end

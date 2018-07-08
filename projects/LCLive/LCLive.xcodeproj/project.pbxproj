@@ -212,16 +212,20 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LCLive/Pods-LCLive-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/LCBase/LCBase.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/LCChat/LCChat.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/LCMe/LCMe.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/LCMediator/LCMediator.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/LCMoment/LCMoment.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/LCUser/LCUser.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/LCWeb/LCWeb.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCBase.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCChat.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCMe.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCMediator.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCMoment.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCUser.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCWeb.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

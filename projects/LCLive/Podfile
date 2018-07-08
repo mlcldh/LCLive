@@ -7,6 +7,8 @@ target 'LCLive' do
 
 pod 'LCMediator', :path => '../LCMediator'
 pod 'LCBase', :path => '../LCBase'
+pod 'LCUser', :path => '../LCUser'
+pod 'LCMe', :path => '../LCMe'
 pod 'LCChat', :path => '../LCChat'
 pod 'LCWeb', :path => '../LCWeb'
 pod 'LCMoment', :path => '../LCMoment'

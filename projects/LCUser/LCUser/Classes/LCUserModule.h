@@ -1,14 +1,14 @@
 //
-//  LCWebModule.h
-//  LCWeb
+//  LCUserModule.h
+//  LCUser
 //
 //  Created by MengLingChao on 2018/7/8.
 //  Copyright © 2018年 MengLingChao. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <LCMediator/LCWebModuleProtocol.h>
+#import <LCMediator/LCUserModuleProtocol.h>
 
-@interface LCWebModule : NSObject<LCWebModule>
+@interface LCUserModule : NSObject<LCUserModule>
 
 @end

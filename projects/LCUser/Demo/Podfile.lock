@@ -17,26 +17,10 @@ PODS:
   - LCBase (0.1.0):
     - AFNetworking
     - Masonry
-  - LCChat (0.1.0):
-    - AFNetworking
-    - LCMediator
-    - Masonry
-  - LCMe (0.1.0):
-    - AFNetworking
-    - LCMediator
-    - Masonry
   - LCMediator (0.1.0):
     - AFNetworking
     - Masonry
-  - LCMoment (0.1.0):
-    - AFNetworking
-    - LCMediator
-    - Masonry
   - LCUser (0.1.0):
-    - AFNetworking
-    - LCMediator
-    - Masonry
-  - LCWeb (0.1.0):
     - AFNetworking
     - LCMediator
     - Masonry
@@ -44,13 +28,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - LCBase (from `../LCBase`)
-  - LCChat (from `../LCChat`)
-  - LCMe (from `../LCMe`)
-  - LCMediator (from `../LCMediator`)
-  - LCMoment (from `../LCMoment`)
-  - LCUser (from `../LCUser`)
-  - LCWeb (from `../LCWeb`)
+  - LCBase (from `../../LCBase`)
+  - LCMediator (from `../../LCMediator`)
+  - LCUser (from `../`)
   - Masonry
 
 SPEC REPOS:
@@ -60,31 +40,19 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   LCBase:
-    :path: "../LCBase"
-  LCChat:
-    :path: "../LCChat"
-  LCMe:
-    :path: "../LCMe"
+    :path: "../../LCBase"
   LCMediator:
-    :path: "../LCMediator"
-  LCMoment:
-    :path: "../LCMoment"
+    :path: "../../LCMediator"
   LCUser:
-    :path: "../LCUser"
-  LCWeb:
-    :path: "../LCWeb"
+    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   LCBase: 5a7fb5b662b054598aac7963542a5513d5faf40e
-  LCChat: fe0b0e6972d6ebf4dd2ec38faaf2d65a391fe7f0
-  LCMe: fcf96be6c4a27f8dbcb9574a4177948adf0f53f1
   LCMediator: 8ddb4a9170053d2b37101e6ffb2fd23ec7a0eee0
-  LCMoment: 77be6bf258fd2a85ba7a0dd5875fc89e0ca4c7e1
   LCUser: abc7c805c36001577c812a06e27aef233b02d729
-  LCWeb: 22fe26117bdffaf549b4896078c6681a39875161
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 559f94350b38223246dd8ac7189fe40fd7b766f4
+PODFILE CHECKSUM: 6e7593d36be554c5dee9aa7db58a5e4481ef2cdf
 
 COCOAPODS: 1.5.0
