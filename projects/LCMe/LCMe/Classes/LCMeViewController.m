@@ -6,6 +6,8 @@
 //
 
 #import "LCMeViewController.h"
+#import "LCMediatorHeader.h"
+#import "LCUserModuleProtocol.h"
 
 @interface LCMeViewController ()
 
@@ -16,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
+    NSString *userId = [userModuleClass userId];
+    NSLog(@"userId = %@",userId);
 }
 
 - (void)didReceiveMemoryWarning {
