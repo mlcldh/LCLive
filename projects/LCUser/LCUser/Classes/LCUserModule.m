@@ -10,4 +10,11 @@
 
 @implementation LCUserModule
 
++ (NSString *)userId {
+    return @"abc123100";
+}
++ (NSString *)token {
+    return @"qwe007what";
+}
+
 @end
