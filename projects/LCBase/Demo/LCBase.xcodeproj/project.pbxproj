@@ -13,7 +13,6 @@
 		8DCCE26720EF4D5C002EA6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE26620EF4D5C002EA6AE /* Assets.xcassets */; };
 		8DCCE26A20EF4D5C002EA6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE26820EF4D5C002EA6AE /* LaunchScreen.storyboard */; };
 		8DCCE26D20EF4D5C002EA6AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE26C20EF4D5C002EA6AE /* main.m */; };
-		8DCCE29A20EF5922002EA6AE /* LCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE29920EF5922002EA6AE /* LCBaseViewController.m */; };
 		8DCCE29F20EF731B002EA6AE /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE29B20EF731B002EA6AE /* ThirdViewController.m */; };
 		8DCCE2A020EF731B002EA6AE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE29E20EF731B002EA6AE /* SecondViewController.m */; };
 		8DCCE2A320EF73E0002EA6AE /* LCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE2A220EF73E0002EA6AE /* LCNavigationBar.m */; };
@@ -32,8 +31,6 @@
 		8DCCE26920EF4D5C002EA6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DCCE26B20EF4D5C002EA6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DCCE26C20EF4D5C002EA6AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8DCCE29820EF5922002EA6AE /* LCBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCBaseViewController.h; sourceTree = "<group>"; };
-		8DCCE29920EF5922002EA6AE /* LCBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCBaseViewController.m; sourceTree = "<group>"; };
 		8DCCE29B20EF731B002EA6AE /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		8DCCE29C20EF731B002EA6AE /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		8DCCE29D20EF731B002EA6AE /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -99,8 +96,6 @@
 				8DCCE26020EF4D5C002EA6AE /* ViewController.h */,
 				8DCCE26120EF4D5C002EA6AE /* ViewController.m */,
 				8DCCE26320EF4D5C002EA6AE /* Main.storyboard */,
-				8DCCE29820EF5922002EA6AE /* LCBaseViewController.h */,
-				8DCCE29920EF5922002EA6AE /* LCBaseViewController.m */,
 				8DCCE29D20EF731B002EA6AE /* SecondViewController.h */,
 				8DCCE29E20EF731B002EA6AE /* SecondViewController.m */,
 				8DCCE29C20EF731B002EA6AE /* ThirdViewController.h */,
@@ -213,7 +208,6 @@
 				8DCCE26220EF4D5C002EA6AE /* ViewController.m in Sources */,
 				8DCCE29F20EF731B002EA6AE /* ThirdViewController.m in Sources */,
 				8DCCE26D20EF4D5C002EA6AE /* main.m in Sources */,
-				8DCCE29A20EF5922002EA6AE /* LCBaseViewController.m in Sources */,
 				8DCCE25F20EF4D5C002EA6AE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

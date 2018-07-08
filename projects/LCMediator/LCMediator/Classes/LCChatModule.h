@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol LCChatModule <NSObject>
-
-@end
+    
+    + (NSUInteger)ureandCount;
+    
+    @end

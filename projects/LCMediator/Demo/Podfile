@@ -4,7 +4,8 @@ use_frameworks!
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'LCMediator' do
-#    pod 'LCMediator', :path => '../'
+
+pod 'LCMediator', :path => '../'
 
 pod 'AFNetworking'
 pod 'Masonry'

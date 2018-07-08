@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = '中间件模块，调度模块”'
 
-  s.homepage         = 'http://git.mistong.com/menglingchao'
+  s.homepage         = 'https://github.com/mlcldh/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'menglingchao' => '1228225993@qq.com' }
@@ -28,9 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-#s.source_files = 'LCMediator/Classes/**/*'
-  
-  s.prefix_header_contents = '#import "EWTBase.h"','#import "EWTMediator+EWTUserCenter.h"'
+#s.prefix_header_contents = '#import "EWTBase.h"','#import "EWTMediator+EWTUserCenter.h"'
   
     s.source_files = 'LCMediator/Classes/**/*'
 
@@ -40,8 +38,8 @@ Pod::Spec.new do |s|
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  # s.frameworks = 'UIKit'
    s.dependency 'AFNetworking'
-   s.dependency 'SDWebImage'
+   s.dependency 'Masonry'
    s.static_framework  =  true
   end

@@ -14,6 +14,13 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - LCBase (0.1.0):
+    - AFNetworking
+    - Masonry
+  - LCChat (0.1.0):
+    - AFNetworking
+    - LCMediator
+    - Masonry
   - LCMediator (0.1.0):
     - AFNetworking
     - Masonry
@@ -21,7 +28,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - LCMediator (from `../`)
+  - LCBase (from `../../LCBase`)
+  - LCChat (from `../`)
+  - LCMediator (from `../../LCMediator`)
   - Masonry
 
 SPEC REPOS:
@@ -30,14 +39,20 @@ SPEC REPOS:
     - Masonry
 
 EXTERNAL SOURCES:
-  LCMediator:
+  LCBase:
+    :path: "../../LCBase"
+  LCChat:
     :path: "../"
+  LCMediator:
+    :path: "../../LCMediator"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  LCBase: 5a7fb5b662b054598aac7963542a5513d5faf40e
+  LCChat: d819524109fc4e4c19dd39aab88e8d3401a0481f
   LCMediator: 83b8aec5c044a7d61131c1a0cde87edd7e1ddcdb
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: d7f6c010c175b6bd74d5e4a3a962ad3dcd08e1a2
+PODFILE CHECKSUM: 95b97cbd5d44101f447d8daa59d4d9ed2b180a72
 
 COCOAPODS: 1.5.0

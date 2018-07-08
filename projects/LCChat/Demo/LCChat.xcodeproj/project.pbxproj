@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D922EC520F1F1F800C9D602 /* LCChatModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D922EC420F1F1F800C9D602 /* LCChatModule.m */; };
 		8DCCE1D720EF4A7D002EA6AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE1D620EF4A7D002EA6AE /* AppDelegate.m */; };
 		8DCCE1DA20EF4A7D002EA6AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE1D920EF4A7D002EA6AE /* ViewController.m */; };
 		8DCCE1DD20EF4A7D002EA6AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE1DB20EF4A7D002EA6AE /* Main.storyboard */; };
 		8DCCE1DF20EF4A7D002EA6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE1DE20EF4A7D002EA6AE /* Assets.xcassets */; };
 		8DCCE1E220EF4A7D002EA6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE1E020EF4A7D002EA6AE /* LaunchScreen.storyboard */; };
 		8DCCE1E520EF4A7D002EA6AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE1E420EF4A7D002EA6AE /* main.m */; };
+		F0CDDED1BD276D84D30623D3 /* Pods_LCChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC76253C8E07064AA4E8E283 /* Pods_LCChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		222E7765F6779176B9126516 /* Pods-LCChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCChat/Pods-LCChat.release.xcconfig"; sourceTree = "<group>"; };
+		2C455441999205C5C0EF691A /* Pods-LCChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCChat/Pods-LCChat.debug.xcconfig"; sourceTree = "<group>"; };
+		8D922EC320F1F1F800C9D602 /* LCChatModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCChatModule.h; sourceTree = "<group>"; };
+		8D922EC420F1F1F800C9D602 /* LCChatModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCChatModule.m; sourceTree = "<group>"; };
 		8DCCE1D220EF4A7D002EA6AE /* LCChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCCE1D520EF4A7D002EA6AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DCCE1D620EF4A7D002EA6AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +32,7 @@
 		8DCCE1E120EF4A7D002EA6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DCCE1E320EF4A7D002EA6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DCCE1E420EF4A7D002EA6AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC76253C8E07064AA4E8E283 /* Pods_LCChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +40,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CDDED1BD276D84D30623D3 /* Pods_LCChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58A4E8016FB49BB46D2E24EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC76253C8E07064AA4E8E283 /* Pods_LCChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8DCCE1C920EF4A7D002EA6AE = {
 			isa = PBXGroup;
 			children = (
 				8DCCE1D420EF4A7D002EA6AE /* LCChat */,
 				8DCCE1D320EF4A7D002EA6AE /* Products */,
+				BE789D696325A0D7ED7FB909 /* Pods */,
+				58A4E8016FB49BB46D2E24EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,12 +81,23 @@
 				8DCCE1D820EF4A7D002EA6AE /* ViewController.h */,
 				8DCCE1D920EF4A7D002EA6AE /* ViewController.m */,
 				8DCCE1DB20EF4A7D002EA6AE /* Main.storyboard */,
+				8D922EC320F1F1F800C9D602 /* LCChatModule.h */,
+				8D922EC420F1F1F800C9D602 /* LCChatModule.m */,
 				8DCCE1DE20EF4A7D002EA6AE /* Assets.xcassets */,
 				8DCCE1E020EF4A7D002EA6AE /* LaunchScreen.storyboard */,
 				8DCCE1E320EF4A7D002EA6AE /* Info.plist */,
 				8DCCE1E420EF4A7D002EA6AE /* main.m */,
 			);
 			path = LCChat;
+			sourceTree = "<group>";
+		};
+		BE789D696325A0D7ED7FB909 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C455441999205C5C0EF691A /* Pods-LCChat.debug.xcconfig */,
+				222E7765F6779176B9126516 /* Pods-LCChat.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DCCE1E820EF4A7D002EA6AE /* Build configuration list for PBXNativeTarget "LCChat" */;
 			buildPhases = (
+				4DB56F7132336803DF5DEFF8 /* [CP] Check Pods Manifest.lock */,
 				8DCCE1CE20EF4A7D002EA6AE /* Sources */,
 				8DCCE1CF20EF4A7D002EA6AE /* Frameworks */,
 				8DCCE1D020EF4A7D002EA6AE /* Resources */,
+				A6ED8682010E13F40B145D1D /* [CP] Embed Pods Frameworks */,
+				303C50EB34CF4C5A78F6A11F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +169,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		303C50EB34CF4C5A78F6A11F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LCChat/Pods-LCChat-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/LCBase/LCBase.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/LCChat/LCChat.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/LCMediator/LCMediator.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCBase.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCChat.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCMediator.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCChat/Pods-LCChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DB56F7132336803DF5DEFF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LCChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6ED8682010E13F40B145D1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LCChat/Pods-LCChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCChat/Pods-LCChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8DCCE1CE20EF4A7D002EA6AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,6 +239,7 @@
 			files = (
 				8DCCE1DA20EF4A7D002EA6AE /* ViewController.m in Sources */,
 				8DCCE1E520EF4A7D002EA6AE /* main.m in Sources */,
+				8D922EC520F1F1F800C9D602 /* LCChatModule.m in Sources */,
 				8DCCE1D720EF4A7D002EA6AE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,11 +372,13 @@
 		};
 		8DCCE1E920EF4A7D002EA6AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C455441999205C5C0EF691A /* Pods-LCChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JG8HG83X27;
 				INFOPLIST_FILE = LCChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.menglingchao.LCChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,13 +388,15 @@
 		};
 		8DCCE1EA20EF4A7D002EA6AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 222E7765F6779176B9126516 /* Pods-LCChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JG8HG83X27;
 				INFOPLIST_FILE = LCChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.menglingchao.LCChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.menglingchao.hehea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

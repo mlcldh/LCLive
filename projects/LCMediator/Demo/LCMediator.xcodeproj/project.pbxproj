@@ -107,6 +107,7 @@
 				8DCCE23520EF4C0A002EA6AE /* Frameworks */,
 				8DCCE23620EF4C0A002EA6AE /* Resources */,
 				4110C17873242EAA138D8D3C /* [CP] Embed Pods Frameworks */,
+				C7BCEFB925D375D79F814AF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +201,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCMediator/Pods-LCMediator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7BCEFB925D375D79F814AF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LCMediator/Pods-LCMediator-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/LCMediator/LCMediator.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCMediator.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCMediator/Pods-LCMediator-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

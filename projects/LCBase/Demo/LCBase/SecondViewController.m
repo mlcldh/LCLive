@@ -14,6 +14,7 @@
 @interface SecondViewController ()
 
 @property (nonatomic,strong) LCNavigationBar *navigationBar;
+@property(nonatomic,strong) UINavigationItem *navigationItem;
 @property (nonatomic,strong) UIButton *button;
 
 @end
@@ -62,7 +63,7 @@
 - (LCNavigationBar *)navigationBar {
     if (!_navigationBar) {
         _navigationBar = [[LCNavigationBar alloc]init];
-        _navigationBar.navigationItem.leftBarButtonItem = self.backItem;
+        _navigationBar.navigationItem.leftBarButtonItems = @[self.backItem];
         [self.view addSubview:_navigationBar];
         [_navigationBar mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.mas_topLayoutGuide);
@@ -73,6 +74,12 @@
     }
     return _navigationBar;
 }
+//- (UINavigationItem *)navigationItem {
+//    if (!_navigationItem) {
+//        _navigationItem = ;
+//    }
+//    return _navigationItem;
+//}
 - (UIButton *)button {
     if (!_button) {
         _button = [[UIButton alloc]init];
