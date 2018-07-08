@@ -1,8 +1,15 @@
+platform :ios, '8.0'
+use_frameworks!
+
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios,			'7.0'
-inhibit_all_warnings!
 
-target:'LCBase'
+target 'LCMoment' do
 
+pod 'LCMoment', :path => '../'
+pod 'LCMediator', :path => '../../LCMediator'
+pod 'LCBase', :path => '../../LCBase'
 
+pod 'AFNetworking'
 pod 'Masonry'
+
+end

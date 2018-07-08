@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+/**web模块协议*/
 @protocol LCWebModule <NSObject>
+
+/**跳转到h5详情*/
++ (void)pushWebViewControllerFromViewController:(UIViewController *)viewController;
 
 @end

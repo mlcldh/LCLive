@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint LCMediator.podspec' to ensure this is a
+# Be sure to run `pod lib lint LCMoment.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'LCMediator'
+  s.name             = 'LCMoment'
   s.version          = '0.1.0'
   s.summary          = '中间件模块，调度模块'
 
@@ -28,17 +28,18 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-s.prefix_header_contents = '#import "LCMediatorHeader.h"'
-
-    s.source_files = 'LCMediator/Classes/**/*'
+#s.prefix_header_contents = '#import "EWTBase.h"','#import "EWTMediator+EWTUserCenter.h"'
+  
+    s.source_files = 'LCMoment/Classes/**/*'
 
    s.resource_bundles = {
-     'LCMediator' => ['LCMediator/Assets/*.png']
+     'LCMoment' => ['LCMoment/Assets/*.png']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore'
    s.dependency 'AFNetworking'
    s.dependency 'Masonry'
+   s.dependency 'LCMediator'
    s.static_framework  =  true
   end

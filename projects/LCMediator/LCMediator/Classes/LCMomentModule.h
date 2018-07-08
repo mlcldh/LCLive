@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+/**朋友圈模块协议*/
 @protocol LCMomentModule <NSObject>
+
+/**跳转到动态详情*/
++ (void)pushMomentDetailViewControllerFromViewController:(UIViewController *)viewController;
 
 @end

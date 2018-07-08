@@ -13,5 +13,8 @@
 + (NSUInteger)ureandCount {
     return 3;
 }
++ (void)pushChatViewControllerFromViewController:(UIViewController *)viewController {
+    
+}
 
 @end

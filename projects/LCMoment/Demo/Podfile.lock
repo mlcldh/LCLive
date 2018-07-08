@@ -17,20 +17,20 @@ PODS:
   - LCBase (0.1.0):
     - AFNetworking
     - Masonry
-  - LCChat (0.1.0):
-    - AFNetworking
-    - LCMediator
-    - Masonry
   - LCMediator (0.1.0):
     - AFNetworking
+    - Masonry
+  - LCMoment (0.1.0):
+    - AFNetworking
+    - LCMediator
     - Masonry
   - Masonry (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - LCBase (from `../../LCBase`)
-  - LCChat (from `../`)
   - LCMediator (from `../../LCMediator`)
+  - LCMoment (from `../`)
   - Masonry
 
 SPEC REPOS:
@@ -41,18 +41,18 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   LCBase:
     :path: "../../LCBase"
-  LCChat:
-    :path: "../"
   LCMediator:
     :path: "../../LCMediator"
+  LCMoment:
+    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   LCBase: 5a7fb5b662b054598aac7963542a5513d5faf40e
-  LCChat: fe0b0e6972d6ebf4dd2ec38faaf2d65a391fe7f0
   LCMediator: 8ddb4a9170053d2b37101e6ffb2fd23ec7a0eee0
+  LCMoment: 77be6bf258fd2a85ba7a0dd5875fc89e0ca4c7e1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 95b97cbd5d44101f447d8daa59d4d9ed2b180a72
+PODFILE CHECKSUM: 4319cd29cd48e6dc0b0eab8dccb76cbdf5868672
 
 COCOAPODS: 1.5.0

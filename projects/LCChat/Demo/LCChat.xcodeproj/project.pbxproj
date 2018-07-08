@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D922EC520F1F1F800C9D602 /* LCChatModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D922EC420F1F1F800C9D602 /* LCChatModule.m */; };
 		8DCCE1D720EF4A7D002EA6AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE1D620EF4A7D002EA6AE /* AppDelegate.m */; };
 		8DCCE1DA20EF4A7D002EA6AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE1D920EF4A7D002EA6AE /* ViewController.m */; };
 		8DCCE1DD20EF4A7D002EA6AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE1DB20EF4A7D002EA6AE /* Main.storyboard */; };
@@ -20,8 +19,6 @@
 /* Begin PBXFileReference section */
 		222E7765F6779176B9126516 /* Pods-LCChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCChat/Pods-LCChat.release.xcconfig"; sourceTree = "<group>"; };
 		2C455441999205C5C0EF691A /* Pods-LCChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCChat/Pods-LCChat.debug.xcconfig"; sourceTree = "<group>"; };
-		8D922EC320F1F1F800C9D602 /* LCChatModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCChatModule.h; sourceTree = "<group>"; };
-		8D922EC420F1F1F800C9D602 /* LCChatModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCChatModule.m; sourceTree = "<group>"; };
 		8DCCE1D220EF4A7D002EA6AE /* LCChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCCE1D520EF4A7D002EA6AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DCCE1D620EF4A7D002EA6AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,8 +78,6 @@
 				8DCCE1D820EF4A7D002EA6AE /* ViewController.h */,
 				8DCCE1D920EF4A7D002EA6AE /* ViewController.m */,
 				8DCCE1DB20EF4A7D002EA6AE /* Main.storyboard */,
-				8D922EC320F1F1F800C9D602 /* LCChatModule.h */,
-				8D922EC420F1F1F800C9D602 /* LCChatModule.m */,
 				8DCCE1DE20EF4A7D002EA6AE /* Assets.xcassets */,
 				8DCCE1E020EF4A7D002EA6AE /* LaunchScreen.storyboard */,
 				8DCCE1E320EF4A7D002EA6AE /* Info.plist */,
@@ -239,7 +234,6 @@
 			files = (
 				8DCCE1DA20EF4A7D002EA6AE /* ViewController.m in Sources */,
 				8DCCE1E520EF4A7D002EA6AE /* main.m in Sources */,
-				8D922EC520F1F1F800C9D602 /* LCChatModule.m in Sources */,
 				8DCCE1D720EF4A7D002EA6AE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
