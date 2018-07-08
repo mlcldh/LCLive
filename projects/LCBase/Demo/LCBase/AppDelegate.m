@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-//#import "ELNavigationController.h"
+#import "LCNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -24,8 +24,8 @@
     
     ViewController *vc = [ViewController new];
     //    self.window.rootViewController = vc;
-        UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:vc];
-//    ELNavigationController *nc = [[ELNavigationController alloc]initWithRootViewController:vc];
+//    UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:vc];
+    LCNavigationController *nc = [[LCNavigationController alloc]initWithRootViewController:vc];
     self.window.rootViewController = nc;
     
     [self.window makeKeyAndVisible];

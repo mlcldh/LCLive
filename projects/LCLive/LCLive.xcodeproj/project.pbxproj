@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DFDED571B9A42B595D25017 /* Pods_LCLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E48980957E3F13FC3928C5 /* Pods_LCLive.framework */; };
 		8DCCE1B520EF4A71002EA6AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE1B420EF4A71002EA6AE /* AppDelegate.m */; };
 		8DCCE1B820EF4A71002EA6AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE1B720EF4A71002EA6AE /* ViewController.m */; };
 		8DCCE1BB20EF4A71002EA6AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE1B920EF4A71002EA6AE /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		725CA962572F272B81031B49 /* Pods-LCLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCLive/Pods-LCLive.release.xcconfig"; sourceTree = "<group>"; };
 		8DCCE1B020EF4A71002EA6AE /* LCLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCCE1B320EF4A71002EA6AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DCCE1B420EF4A71002EA6AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		8DCCE1BF20EF4A71002EA6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DCCE1C120EF4A71002EA6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DCCE1C220EF4A71002EA6AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9D04F454560AD15B0F006D1E /* Pods-LCLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCLive/Pods-LCLive.debug.xcconfig"; sourceTree = "<group>"; };
+		A8E48980957E3F13FC3928C5 /* Pods_LCLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DFDED571B9A42B595D25017 /* Pods_LCLive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B2B92A4F24A2E74A0BDF131 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8E48980957E3F13FC3928C5 /* Pods_LCLive.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8DCCE1A720EF4A71002EA6AE = {
 			isa = PBXGroup;
 			children = (
 				8DCCE1B220EF4A71002EA6AE /* LCLive */,
 				8DCCE1B120EF4A71002EA6AE /* Products */,
+				C8EDE94536B6725076CD3DFC /* Pods */,
+				8B2B92A4F24A2E74A0BDF131 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +86,15 @@
 			path = LCLive;
 			sourceTree = "<group>";
 		};
+		C8EDE94536B6725076CD3DFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D04F454560AD15B0F006D1E /* Pods-LCLive.debug.xcconfig */,
+				725CA962572F272B81031B49 /* Pods-LCLive.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DCCE1C620EF4A71002EA6AE /* Build configuration list for PBXNativeTarget "LCLive" */;
 			buildPhases = (
+				A9B249CFFB51BF52C885D156 /* [CP] Check Pods Manifest.lock */,
 				8DCCE1AC20EF4A71002EA6AE /* Sources */,
 				8DCCE1AD20EF4A71002EA6AE /* Frameworks */,
 				8DCCE1AE20EF4A71002EA6AE /* Resources */,
+				73EEEC6D8217A7FDEBA58FFC /* [CP] Embed Pods Frameworks */,
+				AF652AB4A5E46BA1938B1C31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		73EEEC6D8217A7FDEBA58FFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LCLive/Pods-LCLive-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCLive/Pods-LCLive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9B249CFFB51BF52C885D156 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LCLive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF652AB4A5E46BA1938B1C31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LCLive/Pods-LCLive-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/LCBase/LCBase.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/LCChat/LCChat.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/LCMediator/LCMediator.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCBase.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCChat.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCMediator.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCLive/Pods-LCLive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DCCE1AC20EF4A71002EA6AE /* Sources */ = {
@@ -276,11 +366,13 @@
 		};
 		8DCCE1C720EF4A71002EA6AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D04F454560AD15B0F006D1E /* Pods-LCLive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JG8HG83X27;
 				INFOPLIST_FILE = LCLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.menglingchao.LCLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,11 +382,13 @@
 		};
 		8DCCE1C820EF4A71002EA6AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 725CA962572F272B81031B49 /* Pods-LCLive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JG8HG83X27;
 				INFOPLIST_FILE = LCLive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.menglingchao.LCLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";

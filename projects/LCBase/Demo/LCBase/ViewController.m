@@ -63,6 +63,7 @@
     //    [self presentViewController:mVC animated:YES completion:^{
     //    }];
     SecondViewController *twoVC = [[SecondViewController alloc]init];
+//    UIViewController *twoVC = [[UIViewController alloc]init];
     [self.navigationController pushViewController:twoVC animated:YES];
 }
 

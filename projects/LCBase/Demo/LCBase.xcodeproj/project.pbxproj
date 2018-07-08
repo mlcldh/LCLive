@@ -16,7 +16,7 @@
 		8DCCE29F20EF731B002EA6AE /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE29B20EF731B002EA6AE /* ThirdViewController.m */; };
 		8DCCE2A020EF731B002EA6AE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE29E20EF731B002EA6AE /* SecondViewController.m */; };
 		8DCCE2A320EF73E0002EA6AE /* LCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE2A220EF73E0002EA6AE /* LCNavigationBar.m */; };
-		ED4E3746C06904405BD3BE07 /* libPods-LCBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDCA35FAD82A5F66AE36A168 /* libPods-LCBase.a */; };
+		D03D16E9CF250DA9856BB26F /* Pods_LCBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A0C10A6628C521F1C126AF /* Pods_LCBase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +37,8 @@
 		8DCCE29E20EF731B002EA6AE /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		8DCCE2A120EF73E0002EA6AE /* LCNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCNavigationBar.h; sourceTree = "<group>"; };
 		8DCCE2A220EF73E0002EA6AE /* LCNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCNavigationBar.m; sourceTree = "<group>"; };
+		A6A0C10A6628C521F1C126AF /* Pods_LCBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB4AE8347855FEC662C4D10 /* Pods-LCBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCBase/Pods-LCBase.release.xcconfig"; sourceTree = "<group>"; };
-		DDCA35FAD82A5F66AE36A168 /* libPods-LCBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED4E3746C06904405BD3BE07 /* libPods-LCBase.a in Frameworks */,
+				D03D16E9CF250DA9856BB26F /* Pods_LCBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 		164E460A160BBA9CBBE7C1F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DDCA35FAD82A5F66AE36A168 /* libPods-LCBase.a */,
+				A6A0C10A6628C521F1C126AF /* Pods_LCBase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,6 +121,8 @@
 				8DCCE25620EF4D5C002EA6AE /* Sources */,
 				8DCCE25720EF4D5C002EA6AE /* Frameworks */,
 				8DCCE25820EF4D5C002EA6AE /* Resources */,
+				11CF2222D159851FCD92CD05 /* [CP] Embed Pods Frameworks */,
+				9FAF0F6EA01818295FC5C38D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,6 +180,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		11CF2222D159851FCD92CD05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LCBase/Pods-LCBase-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCBase/Pods-LCBase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		14EB3C93330B7006FEB110AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,6 +216,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FAF0F6EA01818295FC5C38D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LCBase/Pods-LCBase-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/LCBase/LCBase.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCBase.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCBase/Pods-LCBase-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

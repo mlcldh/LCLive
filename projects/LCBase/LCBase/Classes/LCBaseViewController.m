@@ -30,8 +30,8 @@
 }
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    BOOL enabled = self.navigationController.interactivePopGestureRecognizer.enabled;
-    NSLog(@"%@,enabled = %@",self,@(enabled));
+//    BOOL enabled = self.navigationController.interactivePopGestureRecognizer.enabled;
+//    NSLog(@"%@,enabled = %@",self,@(enabled));
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -40,8 +40,9 @@
 #pragma mark - Getter
 - (UIBarButtonItem *)backItem {
     if (!_backItem) {
-        _backItem = [[UIBarButtonItem alloc]initWithTitle:@"back" style:(UIBarButtonItemStylePlain) target:self action:@selector(popAction:)];
-//        _backItem = [UIBarButtonItem el_backItem:self action:action];
+//        _backItem = [[UIBarButtonItem alloc]initWithTitle:@"back" style:(UIBarButtonItemStylePlain) target:self action:@selector(popAction:)];
+        _backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lcbase_nav_back"] style:UIBarButtonItemStylePlain target:self action:@selector(popAction:)];
+//        _backItem.tintColor = [UIColor whiteColor];//返回按钮
     }
     return _backItem;
 }

@@ -14,7 +14,7 @@
 @interface SecondViewController ()
 
 @property (nonatomic,strong) LCNavigationBar *navigationBar;
-@property(nonatomic,strong) UINavigationItem *navigationItem;
+//@property(nonatomic,strong) UINavigationItem *navigationItem;
 @property (nonatomic,strong) UIButton *button;
 
 @end
@@ -63,13 +63,15 @@
 - (LCNavigationBar *)navigationBar {
     if (!_navigationBar) {
         _navigationBar = [[LCNavigationBar alloc]init];
+        _navigationBar.navigationItem.title = @"Second";
+//        _navigationBar.navigationItem.prompt = @"prompt";
         _navigationBar.navigationItem.leftBarButtonItems = @[self.backItem];
         [self.view addSubview:_navigationBar];
+        CGFloat height = CGRectGetHeight(self.navigationController.navigationBar.frame);
         [_navigationBar mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.mas_topLayoutGuide);
             make.left.right.equalTo(self.view);
-            make.height.equalTo(self.navigationBar);
-//            make.height.mas_equalTo(44);
+            make.height.mas_equalTo(height);
         }];
     }
     return _navigationBar;

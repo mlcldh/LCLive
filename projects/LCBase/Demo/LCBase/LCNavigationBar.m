@@ -8,12 +8,17 @@
 
 #import "LCNavigationBar.h"
 
+@interface LCNavigationBar ()<UINavigationBarDelegate>
+
+@end
+
 @implementation LCNavigationBar
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.items = @[self.navigationItem];
+        self.delegate = self;
     }
     return self;
 }
@@ -23,6 +28,10 @@
         _navigationItem = [[UINavigationItem alloc] init];
     }
     return _navigationItem;
+}
+#pragma mark - UINavigationBarDelegate
+- (UIBarPosition)positionForBar:(id <UIBarPositioning>)bar {
+    return UIBarPositionTopAttached;
 }
 
 @end

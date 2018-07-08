@@ -5,7 +5,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'LCBase' do
 
-pod 'LCBase', :path => '../LCBase'
+pod 'LCBase', :path => '..'
 
 pod 'Masonry'
 pod 'AFNetworking'
