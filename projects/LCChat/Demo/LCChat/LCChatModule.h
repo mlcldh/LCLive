@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LCChatModule.h"
+#import <LCMediator/LCChatModule.h>
+//#import "LCChatModule.h"
 
 @interface LCChatModule : NSObject<LCChatModule>
 

@@ -10,4 +10,8 @@
 
 @implementation LCChatModule
 
++ (NSUInteger)ureandCount {
+    return 3;
+}
+
 @end
