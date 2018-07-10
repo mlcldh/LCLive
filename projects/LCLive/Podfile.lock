@@ -19,6 +19,7 @@ PODS:
     - Masonry
   - LCChat (0.1.0):
     - AFNetworking
+    - LCBase
     - LCMediator
     - Masonry
   - LCMe (0.1.0):
@@ -77,7 +78,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   LCBase: 5a7fb5b662b054598aac7963542a5513d5faf40e
-  LCChat: fe0b0e6972d6ebf4dd2ec38faaf2d65a391fe7f0
+  LCChat: d6d413a67764f34f1ab4e970bd590ecdc5d5e175
   LCMe: fcf96be6c4a27f8dbcb9574a4177948adf0f53f1
   LCMediator: 8ddb4a9170053d2b37101e6ffb2fd23ec7a0eee0
   LCMoment: 77be6bf258fd2a85ba7a0dd5875fc89e0ca4c7e1

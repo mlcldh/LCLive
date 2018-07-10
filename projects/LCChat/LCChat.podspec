@@ -41,5 +41,6 @@ Pod::Spec.new do |s|
    s.dependency 'AFNetworking'
    s.dependency 'Masonry'
    s.dependency 'LCMediator'
+   s.dependency 'LCBase'
    s.static_framework  =  true
   end
