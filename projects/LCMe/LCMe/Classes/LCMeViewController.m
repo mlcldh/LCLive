@@ -8,6 +8,10 @@
 #import "LCMeViewController.h"
 #import "LCMediatorHeader.h"
 #import "LCUserModuleProtocol.h"
+//#import "LCMeModule.h"
+#import <objc/runtime.h>
+
+//@class LCMeModule;
 
 @interface LCMeViewController ()
 
@@ -18,6 +22,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    LCMeModule *meModule = [[LCMeModule alloc]init];
+    
+    NSString *hehe = @"LCWhat";
+    const char *name = hehe.UTF8String;
+    Class oneClass = objc_getClass(name);
+    
+    Class meVCClass =  NSClassFromString(@"LCMeViewController");
+    Class meModuleClass =  NSClassFromString(@"LCMeModule");
+    Class heheClass =  NSClassFromString(@"LCHehe");
+    Class aClass =  NSClassFromString(@"LCUserModule");
     Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
     NSString *userId = [userModuleClass userId];
     NSLog(@"userId = %@",userId);

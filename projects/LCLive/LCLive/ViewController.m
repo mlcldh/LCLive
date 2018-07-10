@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 
@@ -17,6 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *hehe = @"LCHehe";
+    const char *name = hehe.UTF8String;
+    Class oneClass = objc_getClass(name);
+    Class meVCClass =  NSClassFromString(@"LCMeViewController");
+    Class meModuleClass =  NSClassFromString(@"LCMeModule");
+    Class heheClass =  NSClassFromString(@"LCHehe");
+    Class aClass =  NSClassFromString(@"LCUserModule");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

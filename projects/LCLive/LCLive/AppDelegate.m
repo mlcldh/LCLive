@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "LCUserModule.h"
+#import "LCWebModule.h"
+#import "LCMomentModule.h"
+#import "LCChatModule.h"
+#import "LCMeModule.h"
 #import "LCNavigationController.h"
 #import "LCMeViewController.h"
 
@@ -21,6 +26,12 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    [LCUserModule class];
+    [LCWebModule class];
+    [LCChatModule class];
+    [LCMomentModule class];
+    [LCMeModule class];
     
     LCMeViewController *vc = [LCMeViewController new];
     //    self.window.rootViewController = vc;
