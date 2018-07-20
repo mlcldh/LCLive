@@ -17,5 +17,7 @@
 + (NSString *)token;
 /**用户昵称*/
 + (NSString *)nickname;
+/**用户头像url地址*/
++ (NSString *)avatarUrlString;
 
 @end

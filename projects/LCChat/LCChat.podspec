@@ -38,8 +38,9 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore'
-   s.dependency 'AFNetworking'
    s.dependency 'Masonry'
+   s.dependency 'AFNetworking'
+   s.dependency 'YYWebImage'
    s.dependency 'LCMediator'
    s.dependency 'LCBase'
    s.static_framework  =  true

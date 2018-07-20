@@ -17,15 +17,18 @@ PODS:
   - LCBase (0.1.0):
     - AFNetworking
     - Masonry
+    - YYWebImage
   - LCChat (0.1.0):
     - AFNetworking
     - LCBase
     - LCMediator
     - Masonry
+    - YYWebImage
   - LCMe (0.1.0):
     - AFNetworking
     - LCMediator
     - Masonry
+    - YYWebImage
   - LCMediator (0.1.0):
     - AFNetworking
     - Masonry
@@ -33,6 +36,7 @@ PODS:
     - AFNetworking
     - LCMediator
     - Masonry
+    - YYWebImage
   - LCUser (0.1.0):
     - AFNetworking
     - LCMediator
@@ -42,6 +46,13 @@ PODS:
     - LCMediator
     - Masonry
   - Masonry (1.1.0)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - AFNetworking
@@ -53,11 +64,15 @@ DEPENDENCIES:
   - LCUser (from `../LCUser`)
   - LCWeb (from `../LCWeb`)
   - Masonry (~> 1.1.0)
+  - YYWebImage (~> 1.0.5)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - Masonry
+    - YYCache
+    - YYImage
+    - YYWebImage
 
 EXTERNAL SOURCES:
   LCBase:
@@ -77,15 +92,18 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  LCBase: 5a7fb5b662b054598aac7963542a5513d5faf40e
-  LCChat: 388111cbd97441f686f7a6bb74fe4b78a9b33222
-  LCMe: 3be6894b66030f9d1d1bdb074875e97c8f49421f
+  LCBase: 7e8a9f6fa624fe7aa0cdfbbfb65c497f863c1ba6
+  LCChat: e3026b263d0e29a874d7d9f78121d39ca9d30fb0
+  LCMe: 253a38d48133c9ad9c13f5511c65fdab6d0a5138
   LCMediator: 0eb0e3b8e50fdb4eb94af1a4e41ddf0034425b45
-  LCMoment: 77be6bf258fd2a85ba7a0dd5875fc89e0ca4c7e1
+  LCMoment: 2b4d454c4b9584fab0f2681bd013d4065323d63a
   LCUser: abc7c805c36001577c812a06e27aef233b02d729
   LCWeb: 22fe26117bdffaf549b4896078c6681a39875161
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 0ac57f4ed4bcb874a151c2969f66c035361904ca
+PODFILE CHECKSUM: 218147e80111fc944234d21ce8c0de3ad9a03703
 
 COCOAPODS: 1.5.0

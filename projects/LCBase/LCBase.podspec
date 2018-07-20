@@ -34,12 +34,13 @@ Pod::Spec.new do |s|
 
 
    s.resource_bundles = {
-     'LCBase' => ['LCBase/Assets/*.png']
+     'LCBase' => ['LCBase/Resources/*.png']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit'
-   s.dependency 'AFNetworking'
    s.dependency 'Masonry'
+   s.dependency 'AFNetworking'
+   s.dependency 'YYWebImage'
    s.static_framework  =  true
   end

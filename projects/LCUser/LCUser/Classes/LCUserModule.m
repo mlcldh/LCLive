@@ -19,5 +19,8 @@
 + (NSString *)nickname {
     return @"李明";
 }
++ (NSString *)avatarUrlString {
+    return @"https://avatar.csdn.net/7/5/6/1_mlcldh.jpg?1532075030";
+}
 
 @end

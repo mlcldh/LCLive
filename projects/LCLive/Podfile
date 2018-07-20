@@ -13,7 +13,8 @@ pod 'LCChat', :path => '../LCChat'
 pod 'LCWeb', :path => '../LCWeb'
 pod 'LCMoment', :path => '../LCMoment'
 
-pod 'AFNetworking'
 pod 'Masonry', '~> 1.1.0'
+pod 'AFNetworking'
+pod 'YYWebImage', '~> 1.0.5'
 
 end
