@@ -14,6 +14,6 @@ pod 'LCWeb', :path => '../LCWeb'
 pod 'LCMoment', :path => '../LCMoment'
 
 pod 'AFNetworking'
-pod 'Masonry'
+pod 'Masonry', '~> 1.1.0'
 
 end

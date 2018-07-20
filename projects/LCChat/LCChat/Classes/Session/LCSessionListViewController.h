@@ -5,8 +5,8 @@
 //  Created by MengLingChao on 2018/7/10.
 //
 
-#import "LCBaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface LCSessionListViewController : LCBaseViewController
+@interface LCSessionListViewController : UIViewController
 
 @end

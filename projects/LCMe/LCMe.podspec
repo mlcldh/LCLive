@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
     s.source_files = 'LCMe/Classes/**/*'
 
    s.resource_bundles = {
-     'LCMe' => ['LCMe/Assets/*.png']
+     'LCMe' => ['LCMe/Resources/*.png']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

@@ -16,5 +16,8 @@
 + (NSString *)token {
     return @"qwe007what";
 }
++ (NSString *)nickname {
+    return @"李明";
+}
 
 @end

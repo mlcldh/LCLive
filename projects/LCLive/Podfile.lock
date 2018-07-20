@@ -52,7 +52,7 @@ DEPENDENCIES:
   - LCMoment (from `../LCMoment`)
   - LCUser (from `../LCUser`)
   - LCWeb (from `../LCWeb`)
-  - Masonry
+  - Masonry (~> 1.1.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -78,14 +78,14 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   LCBase: 5a7fb5b662b054598aac7963542a5513d5faf40e
-  LCChat: d6d413a67764f34f1ab4e970bd590ecdc5d5e175
-  LCMe: fcf96be6c4a27f8dbcb9574a4177948adf0f53f1
-  LCMediator: 8ddb4a9170053d2b37101e6ffb2fd23ec7a0eee0
+  LCChat: 388111cbd97441f686f7a6bb74fe4b78a9b33222
+  LCMe: 3be6894b66030f9d1d1bdb074875e97c8f49421f
+  LCMediator: 0eb0e3b8e50fdb4eb94af1a4e41ddf0034425b45
   LCMoment: 77be6bf258fd2a85ba7a0dd5875fc89e0ca4c7e1
   LCUser: abc7c805c36001577c812a06e27aef233b02d729
   LCWeb: 22fe26117bdffaf549b4896078c6681a39875161
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 559f94350b38223246dd8ac7189fe40fd7b766f4
+PODFILE CHECKSUM: 0ac57f4ed4bcb874a151c2969f66c035361904ca
 
 COCOAPODS: 1.5.0

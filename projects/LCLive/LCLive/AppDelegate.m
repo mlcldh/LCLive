@@ -12,7 +12,7 @@
 #import "LCMomentModule.h"
 #import "LCChatModule.h"
 #import "LCMeModule.h"
-#import "LCNavigationController.h"
+//#import "LCNavigationController.h"
 #import "LCSessionListViewController.h"
 #import "LCMeViewController.h"
 
@@ -34,14 +34,16 @@
     [LCMomentModule class];
     [LCMeModule class];
     
-    NSArray *titles = @[@"",@""];
-    NSArray *vcClasses = @[[LCMeViewController class],[LCMeViewController class]];
+    NSArray *titles = @[@"消息",@"我的"];
+    NSArray *imageTags = @[@"message",@"me"];
+    NSArray *vcClasses = @[[LCSessionListViewController class],[LCMeViewController class]];
     NSMutableArray *viewControllers = [NSMutableArray array];
     for (NSInteger i = 0; i < titles.count; i ++) {
-        UIView *vc = [vcClasses[i] new];
-        //    self.window.rootViewController = vc;
-        //    UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:vc];
-        LCNavigationController *nc = [[LCNavigationController alloc]initWithRootViewController:vc];
+        UIViewController *vc = [vcClasses[i] new];
+        UITabBarItem *tabBarItem = [[UITabBarItem alloc]initWithTitle:titles[i] image:[UIImage imageNamed:[NSString stringWithFormat:@"lc_root_tab_%@_normal",imageTags[i]]] selectedImage:[UIImage imageNamed:[NSString stringWithFormat:@"lc_root_tab_%@_pressed",imageTags[i]]]];
+        vc.tabBarItem = tabBarItem;
+        UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:vc];
+//        LCNavigationController *nc = [[LCNavigationController alloc]initWithRootViewController:vc];
         [viewControllers addObject:nc];
     }
     UITabBarController *tbc = [[UITabBarController alloc]init];

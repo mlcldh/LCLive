@@ -33,7 +33,7 @@ s.prefix_header_contents = '#import "LCMediatorHeader.h"'
     s.source_files = 'LCMediator/Classes/**/*'
 
    s.resource_bundles = {
-     'LCMediator' => ['LCMediator/Assets/*.png']
+     'LCMediator' => ['LCMediator/Resources/*.png']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

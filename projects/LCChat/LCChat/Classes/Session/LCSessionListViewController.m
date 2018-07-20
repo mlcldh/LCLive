@@ -6,8 +6,12 @@
 //
 
 #import "LCSessionListViewController.h"
+#import "LCChatViewController.h"
+#import "Masonry.h"
 
 @interface LCSessionListViewController ()
+
+@property (nonatomic,strong)UIButton *button;
 
 @end
 
@@ -16,21 +20,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"消息";
+    [self button];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Getter
+- (UIButton *)button {
+    if (!_button) {
+        _button = [UIButton buttonWithType:(UIButtonTypeSystem)];
+        _button.backgroundColor = [UIColor purpleColor];
+        [_button setTitle:@"button" forState:(UIControlStateNormal)];
+        [_button addTarget:self action:@selector(buttonAction:) forControlEvents:(UIControlEventTouchUpInside)];
+        [self.view addSubview:_button];
+        [_button mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.view);
+            make.top.equalTo(self.mas_topLayoutGuideBottom);
+        }];
+    }
+    return _button;
 }
-*/
+#pragma mark - Action
+- (void)buttonAction:(UIButton *)button {
+    LCChatViewController *chatVC = [[LCChatViewController alloc]init];
+    chatVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:chatVC animated:YES];
+}
 
 @end

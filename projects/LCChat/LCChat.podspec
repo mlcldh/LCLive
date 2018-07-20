@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
     s.source_files = 'LCChat/Classes/**/*'
 
    s.resource_bundles = {
-     'LCChat' => ['LCChat/Assets/*.png']
+     'LCChat' => ['LCChat/Resources/*.png']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

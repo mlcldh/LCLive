@@ -15,5 +15,7 @@
 + (NSString *)userId;
 /**token*/
 + (NSString *)token;
+/**用户昵称*/
++ (NSString *)nickname;
 
 @end
