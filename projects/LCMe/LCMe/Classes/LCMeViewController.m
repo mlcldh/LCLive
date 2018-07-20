@@ -9,8 +9,6 @@
 #import "LCMediatorHeader.h"
 #import "LCUserModuleProtocol.h"
 //#import "LCMeModule.h"
-#import "Masonry.h"
-#import "UIImageView+YYWebImage.h"
 #import <objc/runtime.h>
 
 //@class LCMeModule;
@@ -34,7 +32,7 @@
 //        NSLog(@"bundle = %@",bundle);
 //    }
     self.title = @"我的";
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     [self nicknameLabel];
     [self avatarView];
     [self userIdLabel];

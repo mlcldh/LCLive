@@ -6,8 +6,7 @@
 //
 
 #import "LCSessionListViewController.h"
-#import "LCChatViewController.h"
-#import "Masonry.h"
+#import "LCUserChatViewController.h"
 
 @interface LCSessionListViewController ()
 
@@ -21,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"消息";
+    self.view.backgroundColor = [UIColor whiteColor];
     [self button];
 }
 - (void)didReceiveMemoryWarning {
@@ -44,7 +44,7 @@
 }
 #pragma mark - Action
 - (void)buttonAction:(UIButton *)button {
-    LCChatViewController *chatVC = [[LCChatViewController alloc]init];
+    LCUserChatViewController *chatVC = [[LCUserChatViewController alloc]init];
     chatVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:chatVC animated:YES];
 }

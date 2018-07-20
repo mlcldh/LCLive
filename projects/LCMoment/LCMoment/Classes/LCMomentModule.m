@@ -7,11 +7,14 @@
 //
 
 #import "LCMomentModule.h"
+#import "LCMomentDetailViewController.h"
 
 @implementation LCMomentModule
 
 + (void)pushMomentDetailViewControllerFromViewController:(UIViewController *)viewController {
-    
+    LCMomentDetailViewController *momentDetailVC = [[LCMomentDetailViewController alloc]init];
+    momentDetailVC.hidesBottomBarWhenPushed = YES;
+    [viewController.navigationController pushViewController:momentDetailVC animated:YES];
 }
 
 @end

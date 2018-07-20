@@ -28,8 +28,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-#s.prefix_header_contents = '#import "EWTBase.h"','#import "EWTMediator+EWTUserCenter.h"'
-  
+    s.prefix_header_contents = '#import "Masonry.h"','#import "UIImageView+YYWebImage.h"'
+
     s.source_files = 'LCChat/Classes/**/*'
 
    s.resource_bundles = {

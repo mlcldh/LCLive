@@ -13,7 +13,7 @@
 
 /**读取未读数*/
 + (NSUInteger)ureandCount;
-/**跳转到聊天详情*/
-+ (void)pushChatViewControllerFromViewController:(UIViewController *)viewController;
+/**跳转到单聊聊天详情*/
++ (void)pushUserChatViewControllerWithUserId:(NSString *)userId fromViewController:(UIViewController *)viewController;
 
 @end

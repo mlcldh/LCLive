@@ -14,6 +14,7 @@
 #import "LCMeModule.h"
 //#import "LCNavigationController.h"
 #import "LCSessionListViewController.h"
+#import "LCMomentListViewController.h"
 #import "LCMeViewController.h"
 
 @interface AppDelegate ()
@@ -34,9 +35,9 @@
     [LCMomentModule class];
     [LCMeModule class];
     
-    NSArray *titles = @[@"消息",@"我的"];
-    NSArray *imageTags = @[@"message",@"me"];
-    NSArray *vcClasses = @[[LCSessionListViewController class],[LCMeViewController class]];
+    NSArray *titles = @[@"消息",@"朋友圈",@"我的"];
+    NSArray *imageTags = @[@"message",@"moment",@"me"];
+    NSArray *vcClasses = @[[LCSessionListViewController class],[LCMomentListViewController class],[LCMeViewController class]];
     NSMutableArray *viewControllers = [NSMutableArray array];
     for (NSInteger i = 0; i < titles.count; i ++) {
         UIViewController *vc = [vcClasses[i] new];

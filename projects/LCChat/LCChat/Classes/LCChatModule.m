@@ -7,14 +7,16 @@
 //
 
 #import "LCChatModule.h"
+#import "LCUserChatViewController.h"
 
 @implementation LCChatModule
 
 + (NSUInteger)ureandCount {
     return 3;
 }
-+ (void)pushChatViewControllerFromViewController:(UIViewController *)viewController {
-    
++ (void)pushUserChatViewControllerWithUserId:(NSString *)userId fromViewController:(UIViewController *)viewController {
+    LCUserChatViewController *userChatVC = [[LCUserChatViewController alloc]init];
+    [viewController.navigationController pushViewController:userChatVC animated:YES];
 }
 
 @end

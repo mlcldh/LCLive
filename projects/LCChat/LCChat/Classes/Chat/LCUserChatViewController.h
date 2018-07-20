@@ -7,6 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LCChatViewController : UIViewController
+/**单聊详情*/
+@interface LCUserChatViewController : UIViewController
+
+@property (nonatomic,copy)NSString *userId;
 
 @end

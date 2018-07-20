@@ -28,8 +28,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-#s.prefix_header_contents = '#import "EWTBase.h"','#import "EWTMediator+EWTUserCenter.h"'
-  
+    s.prefix_header_contents = '#import "Masonry.h"','#import "UIImageView+YYWebImage.h"'
+
     s.source_files = 'LCWeb/Classes/**/*'
 
    s.resource_bundles = {
@@ -38,8 +38,9 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore'
-   s.dependency 'AFNetworking'
    s.dependency 'Masonry'
+   s.dependency 'AFNetworking'
+   s.dependency 'YYWebImage'
    s.dependency 'LCMediator'
    s.static_framework  =  true
   end
