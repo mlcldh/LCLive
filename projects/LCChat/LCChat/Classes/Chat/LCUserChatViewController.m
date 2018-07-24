@@ -8,6 +8,8 @@
 #import "LCUserChatViewController.h"
 #import "LCMediatorHeader.h"
 #import "LCUserModuleProtocol.h"
+#import <LCMediator/LCWebModuleProtocol.h>
+#import "LCMomentModuleProtocol.h"
 
 @interface LCUserChatViewController ()
 
@@ -80,10 +82,12 @@
 }
 #pragma mark - Action
 - (void)seeMomentButtonAction:(UIButton *)button {
-    
+    Class momentModuleClass = LCModuleClassFromProtocol(@protocol(LCMomentModule));
+    [momentModuleClass pushMomentDetailViewControllerWithMomentId:@"321" fromViewController:self];
 }
 - (void)seeH5ButtonAction:(UIButton *)button {
-    
+    Class webModuleClass = LCModuleClassFromProtocol(@protocol(LCWebModule));
+    [webModuleClass pushWebViewControllerWithUrlString:@"https://github.com/mlcldh/" fromViewController:self];
 }
 
 @end

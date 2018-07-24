@@ -12,6 +12,6 @@
 @protocol LCMomentModule <NSObject>
 
 /**跳转到动态详情*/
-+ (void)pushMomentDetailViewControllerFromViewController:(UIViewController *)viewController;
++ (void)pushMomentDetailViewControllerWithMomentId:(NSString *)momentId fromViewController:(UIViewController *)viewController;
 
 @end

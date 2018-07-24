@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**h5*/
 @interface LCWebViewController : UIViewController
+
+@property (nonatomic,copy)NSString *urlString;
 
 @end

@@ -7,11 +7,14 @@
 //
 
 #import "LCWebModule.h"
+#import "LCWebViewController.h"
 
 @implementation LCWebModule
 
-+ (void)pushWebViewControllerFromViewController:(UIViewController *)viewController {
-    
++ (void)pushWebViewControllerWithUrlString:(NSString *)urlString fromViewController:(UIViewController *)viewController {
+    LCWebViewController *webVC = [[LCWebViewController alloc]init];
+    webVC.urlString = urlString;
+    [viewController.navigationController pushViewController:webVC animated:YES];
 }
 
 @end

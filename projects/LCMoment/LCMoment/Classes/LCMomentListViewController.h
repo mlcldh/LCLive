@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-/**动态详情*/
+/**动态列表界面*/
 @interface LCMomentListViewController : UIViewController
 
 @end

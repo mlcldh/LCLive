@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"动态详情";
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

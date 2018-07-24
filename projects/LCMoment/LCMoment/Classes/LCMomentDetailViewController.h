@@ -10,4 +10,6 @@
 /**动态详情*/
 @interface LCMomentDetailViewController : UIViewController
 
+@property (nonatomic,copy)NSString *momentId;
+
 @end
