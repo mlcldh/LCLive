@@ -38,6 +38,7 @@
     if (!_nicknameLabel) {
         _nicknameLabel = [[UILabel alloc]init];
         _nicknameLabel.backgroundColor = [UIColor purpleColor];
+        _nicknameLabel.textColor = [UIColor whiteColor];
         Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
         _nicknameLabel.text = [userModuleClass nickname];
         [self.view addSubview:_nicknameLabel];
@@ -56,6 +57,7 @@
     if (!_seeMomentButton) {
         _seeMomentButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
         _seeMomentButton.backgroundColor = [UIColor purpleColor];
+        [_seeMomentButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
         [_seeMomentButton setTitle:@"查看动态" forState:(UIControlStateNormal)];
         [_seeMomentButton addTarget:self action:@selector(seeMomentButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
         [self.view addSubview:_seeMomentButton];
@@ -70,6 +72,7 @@
     if (!_seeH5Button) {
         _seeH5Button = [UIButton buttonWithType:(UIButtonTypeSystem)];
         _seeH5Button.backgroundColor = [UIColor purpleColor];
+        [_seeH5Button setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
         [_seeH5Button setTitle:@"查看h5" forState:(UIControlStateNormal)];
         [_seeH5Button addTarget:self action:@selector(seeH5ButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
         [self.view addSubview:_seeH5Button];
@@ -83,7 +86,7 @@
 #pragma mark - Action
 - (void)seeMomentButtonAction:(UIButton *)button {
     Class momentModuleClass = LCModuleClassFromProtocol(@protocol(LCMomentModule));
-    [momentModuleClass pushMomentDetailViewControllerWithMomentId:@"321" fromViewController:self];
+    [momentModuleClass pushMomentDetailViewControllerWithMomentId:@"110" fromViewController:self];
 }
 - (void)seeH5ButtonAction:(UIButton *)button {
     Class webModuleClass = LCModuleClassFromProtocol(@protocol(LCWebModule));

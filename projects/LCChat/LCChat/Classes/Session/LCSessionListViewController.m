@@ -32,7 +32,8 @@
     if (!_button) {
         _button = [UIButton buttonWithType:(UIButtonTypeSystem)];
         _button.backgroundColor = [UIColor purpleColor];
-        [_button setTitle:@"button" forState:(UIControlStateNormal)];
+        [_button setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+        [_button setTitle:@"查看单聊详情" forState:(UIControlStateNormal)];
         [_button addTarget:self action:@selector(buttonAction:) forControlEvents:(UIControlEventTouchUpInside)];
         [self.view addSubview:_button];
         [_button mas_makeConstraints:^(MASConstraintMaker *make) {

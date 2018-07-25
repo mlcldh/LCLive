@@ -33,6 +33,7 @@
     if (!_seeMomentButton) {
         _seeMomentButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
         _seeMomentButton.backgroundColor = [UIColor purpleColor];
+        [_seeMomentButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
         [_seeMomentButton setTitle:@"查看动态" forState:(UIControlStateNormal)];
         [_seeMomentButton addTarget:self action:@selector(seeMomentButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
         [self.view addSubview:_seeMomentButton];

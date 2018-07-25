@@ -16,6 +16,9 @@
 @interface LCMeViewController ()
 
 @property (nonatomic,strong)UILabel *nicknameLabel;
+@property (nonatomic,strong)NSMutableArray <UILabel *>*numberLabels;
+@property (nonatomic,strong)NSMutableArray <UILabel *>*numberLabels2;
+@property (nonatomic,strong)UILabel *oneLabel;//显示1/4
 @property (nonatomic,strong)UIImageView *avatarView;
 @property (nonatomic,strong)UILabel *userIdLabel;
 
@@ -34,6 +37,9 @@
     self.title = @"我的";
     self.view.backgroundColor = [UIColor whiteColor];
     [self nicknameLabel];
+    [self numberLabels];
+    [self numberLabels2];
+    [self oneLabel];
     [self avatarView];
     [self userIdLabel];
 }
@@ -46,6 +52,7 @@
     if (!_nicknameLabel) {
         _nicknameLabel = [[UILabel alloc]init];
         _nicknameLabel.backgroundColor = [UIColor purpleColor];
+        _nicknameLabel.textColor = [UIColor whiteColor];
         Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
         _nicknameLabel.text = [userModuleClass nickname];
         [self.view addSubview:_nicknameLabel];
@@ -60,12 +67,68 @@
     }
     return _nicknameLabel;
 }
+- (NSMutableArray<UILabel *> *)numberLabels {
+    if (!_numberLabels) {
+        _numberLabels = [NSMutableArray array];
+        NSArray *titles = @[@"One",@"Two",@"Three",@"Four"];
+        for (NSInteger i = 0; i < titles.count; i ++) {
+            UILabel *label = [[UILabel alloc]init];
+            label.backgroundColor = [UIColor orangeColor];
+            label.text = titles[i];
+            label.textAlignment = NSTextAlignmentCenter;
+            [self.view addSubview:label];
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.nicknameLabel.mas_bottom).offset(20);
+            }];
+            [_numberLabels addObject:label];
+        }
+        [_numberLabels mas_distributeViewsAlongAxis:(MASAxisTypeHorizontal) withFixedItemLength:50 leadSpacing:0 tailSpacing:0];
+    }
+    return _numberLabels;
+}
+- (NSMutableArray<UILabel *> *)numberLabels2 {
+    if (!_numberLabels2) {
+        _numberLabels2 = [NSMutableArray array];
+        NSArray *titles = @[@"One",@"Two",@"Three",@"Four"];
+        for (NSInteger i = 0; i < titles.count; i ++) {
+            UILabel *label = [[UILabel alloc]init];
+            label.backgroundColor = [UIColor orangeColor];
+            label.text = titles[i];
+            label.textAlignment = NSTextAlignmentCenter;
+            [self.view addSubview:label];
+            [label mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.nicknameLabel.mas_bottom).offset(50);
+            }];
+            [_numberLabels2 addObject:label];
+        }
+        [_numberLabels2 mas_distributeViewsAlongAxis:(MASAxisTypeHorizontal) withFixedSpacing:50 leadSpacing:0 tailSpacing:0];
+    }
+    return _numberLabels2;
+}
+- (UILabel *)oneLabel {
+    if (!_oneLabel) {
+        _oneLabel = [[UILabel alloc]init];
+        _oneLabel.backgroundColor = [UIColor purpleColor];
+        _oneLabel.textColor = [UIColor whiteColor];
+        _oneLabel.text = @"1/4";
+        _oneLabel.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(oneLabelAction:)];
+        [_oneLabel addGestureRecognizer:tap];
+        [self.view addSubview:_oneLabel];
+        [_oneLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.view.mas_right).multipliedBy(1/4.f);
+            make.top.equalTo(self.nicknameLabel.mas_bottom).offset(80);
+        }];
+    }
+    return _oneLabel;
+}
 - (UIImageView *)avatarView {
     if (!_avatarView) {
         _avatarView = [[UIImageView alloc]init];
-        _avatarView.backgroundColor = [UIColor purpleColor];
-//        Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
-//        [_avatarView yy_setImageWithURL:[NSURL URLWithString:[userModuleClass avatarUrlString]] placeholder:nil];
+//        _avatarView.backgroundColor = [UIColor purpleColor];
+        _avatarView.contentMode = UIViewContentModeScaleAspectFill;
+        Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
+        [_avatarView yy_setImageWithURL:[NSURL URLWithString:[userModuleClass avatarUrlString]] placeholder:nil];
         [self.view addSubview:_avatarView];
         [_avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
             if (@available(iOS 11.0, *)) {
@@ -74,7 +137,7 @@
                 make.left.equalTo(self.view);
             }
             make.centerY.equalTo(self.view);
-            make.size.mas_equalTo(CGSizeMake(44, 44));
+            make.size.mas_equalTo(CGSizeMake(80, 80));
         }];
     }
     return _avatarView;
@@ -83,6 +146,7 @@
     if (!_userIdLabel) {
         _userIdLabel = [[UILabel alloc]init];
         _userIdLabel.backgroundColor = [UIColor purpleColor];
+        _userIdLabel.textColor = [UIColor whiteColor];
         Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
         _userIdLabel.text = [userModuleClass userId];
         [self.view addSubview:_userIdLabel];
@@ -96,6 +160,19 @@
         }];
     }
     return _userIdLabel;
+}
+#pragma mark - Action
+- (void)oneLabelAction:(UITapGestureRecognizer *)recognizer {
+    NSInteger value = arc4random() % 300;
+    
+    [UIView animateWithDuration:3 animations:^{
+        [self.oneLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.nicknameLabel.mas_bottom).offset(80 + value);
+        }];
+        [self.oneLabel.superview layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 #pragma mark -
 - (void)test {

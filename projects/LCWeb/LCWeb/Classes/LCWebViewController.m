@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"H5";
     [self webView];
     NSURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.urlString] cachePolicy:0 timeoutInterval:0];
     [self.webView loadRequest:urlRequest];
