@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6DFDED571B9A42B595D25017 /* Pods_LCLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E48980957E3F13FC3928C5 /* Pods_LCLive.framework */; };
+		66F3F74459EC1AE308501D29 /* libPods-LCLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47AC92E1D0F81718B3B1E230 /* libPods-LCLive.a */; };
 		8DCCE1B520EF4A71002EA6AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE1B420EF4A71002EA6AE /* AppDelegate.m */; };
 		8DCCE1B820EF4A71002EA6AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCCE1B720EF4A71002EA6AE /* ViewController.m */; };
 		8DCCE1BB20EF4A71002EA6AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DCCE1B920EF4A71002EA6AE /* Main.storyboard */; };
@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47AC92E1D0F81718B3B1E230 /* libPods-LCLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		725CA962572F272B81031B49 /* Pods-LCLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCLive/Pods-LCLive.release.xcconfig"; sourceTree = "<group>"; };
 		8DCCE1B020EF4A71002EA6AE /* LCLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCCE1B320EF4A71002EA6AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		8DCCE1C120EF4A71002EA6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DCCE1C220EF4A71002EA6AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9D04F454560AD15B0F006D1E /* Pods-LCLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCLive/Pods-LCLive.debug.xcconfig"; sourceTree = "<group>"; };
-		A8E48980957E3F13FC3928C5 /* Pods_LCLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LCLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DFDED571B9A42B595D25017 /* Pods_LCLive.framework in Frameworks */,
+				66F3F74459EC1AE308501D29 /* libPods-LCLive.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +47,7 @@
 		8B2B92A4F24A2E74A0BDF131 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A8E48980957E3F13FC3928C5 /* Pods_LCLive.framework */,
+				47AC92E1D0F81718B3B1E230 /* libPods-LCLive.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,7 +106,6 @@
 				8DCCE1AC20EF4A71002EA6AE /* Sources */,
 				8DCCE1AD20EF4A71002EA6AE /* Frameworks */,
 				8DCCE1AE20EF4A71002EA6AE /* Resources */,
-				73EEEC6D8217A7FDEBA58FFC /* [CP] Embed Pods Frameworks */,
 				AF652AB4A5E46BA1938B1C31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -165,32 +164,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		73EEEC6D8217A7FDEBA58FFC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LCLive/Pods-LCLive-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
-				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
-				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCLive/Pods-LCLive-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A9B249CFFB51BF52C885D156 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

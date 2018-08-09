@@ -10,4 +10,7 @@
 
 @protocol LCMeModule <NSObject>
 
+/***/
++ (UIViewController *)meViewController;
+
 @end

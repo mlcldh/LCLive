@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <LCMediator/LCMomentModuleProtocol.h>
+//#import <LCMediator/LCMomentModuleProtocol.h>
+#import "LCMomentModuleProtocol.h"
 
 @interface LCMomentModule : NSObject<LCMomentModule>
 

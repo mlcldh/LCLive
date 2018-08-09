@@ -7,10 +7,15 @@
 //
 
 #import "LCMomentModule.h"
+#import "LCMomentListViewController.h"
 #import "LCMomentDetailViewController.h"
 
 @implementation LCMomentModule
 
++ (UIViewController *)momentListViewController {
+    LCMomentListViewController *vc = [[LCMomentListViewController alloc]init];
+    return vc;
+}
 + (void)pushMomentDetailViewControllerWithMomentId:(NSString *)momentId fromViewController:(UIViewController *)viewController {
     LCMomentDetailViewController *momentDetailVC = [[LCMomentDetailViewController alloc]init];
     momentDetailVC.momentId = momentId;

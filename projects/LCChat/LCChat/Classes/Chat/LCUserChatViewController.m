@@ -8,7 +8,8 @@
 #import "LCUserChatViewController.h"
 #import "LCMediatorHeader.h"
 #import "LCUserModuleProtocol.h"
-#import <LCMediator/LCWebModuleProtocol.h>
+//#import <LCMediator/LCWebModuleProtocol.h>
+#import "LCWebModuleProtocol.h"
 #import "LCMomentModuleProtocol.h"
 
 @interface LCUserChatViewController ()
@@ -39,7 +40,8 @@
         _nicknameLabel = [[UILabel alloc]init];
         _nicknameLabel.backgroundColor = [UIColor purpleColor];
         _nicknameLabel.textColor = [UIColor whiteColor];
-        Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
+        Class<LCUserModule> userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
+        [userModuleClass nickname];
         _nicknameLabel.text = [userModuleClass nickname];
         [self.view addSubview:_nicknameLabel];
         [_nicknameLabel mas_makeConstraints:^(MASConstraintMaker *make) {

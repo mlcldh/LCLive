@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <LCMediator/LCMeModuleProtocol.h>
+//#import <LCMediator/LCMeModuleProtocol.h>
+#import "LCMeModuleProtocol.h"
 
 @interface LCMeModule : NSObject<LCMeModule>
 

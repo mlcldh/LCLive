@@ -82,7 +82,7 @@
             }];
             [_numberLabels addObject:label];
         }
-        [_numberLabels mas_distributeViewsAlongAxis:(MASAxisTypeHorizontal) withFixedItemLength:50 leadSpacing:0 tailSpacing:0];
+        [_numberLabels mas_distributeViewsAlongAxis:(MASAxisTypeHorizontal) withFixedItemLength:50 leadSpacing:20 tailSpacing:30];
     }
     return _numberLabels;
 }
@@ -164,11 +164,11 @@
 #pragma mark - Action
 - (void)oneLabelAction:(UITapGestureRecognizer *)recognizer {
     NSInteger value = arc4random() % 300;
-    
+    [self.oneLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.nicknameLabel.mas_bottom).offset(80 + value);
+    }];
     [UIView animateWithDuration:3 animations:^{
-        [self.oneLabel mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.nicknameLabel.mas_bottom).offset(80 + value);
-        }];
+        
         [self.oneLabel.superview layoutIfNeeded];
     } completion:^(BOOL finished) {
         

@@ -13,9 +13,10 @@
 #import "LCChatModule.h"
 #import "LCMeModule.h"
 //#import "LCNavigationController.h"
-#import "LCSessionListViewController.h"
-#import "LCMomentListViewController.h"
-#import "LCMeViewController.h"
+#import "LCMediatorHeader.h"
+#import "LCChatModuleProtocol.h"
+#import "LCMomentModuleProtocol.h"
+#import "LCMeModuleProtocol.h"
 
 @interface AppDelegate ()
 
@@ -29,18 +30,36 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [LCUserModule class];
-    [LCWebModule class];
-    [LCChatModule class];
-    [LCMomentModule class];
-    [LCMeModule class];
+//    [LCUserModule class];
+//    [LCWebModule class];
+//    [LCChatModule class];
+//    [LCMomentModule class];
+//    [LCMeModule class];
     
     NSArray *titles = @[@"消息",@"朋友圈",@"我的"];
     NSArray *imageTags = @[@"message",@"moment",@"me"];
-    NSArray *vcClasses = @[[LCSessionListViewController class],[LCMomentListViewController class],[LCMeViewController class]];
     NSMutableArray *viewControllers = [NSMutableArray array];
     for (NSInteger i = 0; i < titles.count; i ++) {
-        UIViewController *vc = [vcClasses[i] new];
+        UIViewController *vc = nil;
+        switch (i) {
+            case 0:{
+                Class moduleClass = LCModuleClassFromProtocol(@protocol(LCChatModule));
+                vc = [moduleClass sessionListViewController];
+            }
+                break;
+            case 1:{
+                Class moduleClass = LCModuleClassFromProtocol(@protocol(LCMomentModule));
+                vc = [moduleClass momentListViewController];
+            }
+                break;
+            case 2:{
+                Class moduleClass = LCModuleClassFromProtocol(@protocol(LCMeModule));
+                vc = [moduleClass meViewController];
+            }
+                break;
+            default:
+                break;
+        }
         UITabBarItem *tabBarItem = [[UITabBarItem alloc]initWithTitle:titles[i] image:[UIImage imageNamed:[NSString stringWithFormat:@"lc_root_tab_%@_normal",imageTags[i]]] selectedImage:[UIImage imageNamed:[NSString stringWithFormat:@"lc_root_tab_%@_pressed",imageTags[i]]]];
         vc.tabBarItem = tabBarItem;
         UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:vc];

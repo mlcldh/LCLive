@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <LCMediator/LCUserModuleProtocol.h>
+//#import <LCMediator/LCUserModuleProtocol.h>
+#import "LCUserModuleProtocol.h"
 
 @interface LCUserModule : NSObject<LCUserModule>
 

@@ -11,6 +11,8 @@
 /**朋友圈模块协议*/
 @protocol LCMomentModule <NSObject>
 
+/***/
++ (UIViewController *)momentListViewController;
 /**跳转到动态详情*/
 + (void)pushMomentDetailViewControllerWithMomentId:(NSString *)momentId fromViewController:(UIViewController *)viewController;
 

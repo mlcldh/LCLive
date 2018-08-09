@@ -11,6 +11,8 @@
 /**私信模块协议*/
 @protocol LCChatModule <NSObject>
 
+/***/
++ (UIViewController *)sessionListViewController;
 /**读取未读数*/
 + (NSUInteger)ureandCount;
 /**跳转到单聊聊天详情*/

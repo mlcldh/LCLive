@@ -7,7 +7,13 @@
 //
 
 #import "LCMeModule.h"
+#import "LCMeViewController.h"
 
 @implementation LCMeModule
+
++ (UIViewController *)meViewController {
+    LCMeViewController *vc = [[LCMeViewController alloc]init];
+    return vc;
+}
 
 @end

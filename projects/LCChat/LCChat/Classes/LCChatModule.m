@@ -7,10 +7,15 @@
 //
 
 #import "LCChatModule.h"
+#import "LCSessionListViewController.h"
 #import "LCUserChatViewController.h"
 
 @implementation LCChatModule
 
++ (UIViewController *)sessionListViewController {
+    LCSessionListViewController *vc = [[LCSessionListViewController alloc]init];
+    return vc;
+}
 + (NSUInteger)ureandCount {
     return 3;
 }
