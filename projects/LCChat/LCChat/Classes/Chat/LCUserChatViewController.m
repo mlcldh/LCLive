@@ -17,6 +17,8 @@
 @property (nonatomic,strong)UILabel *nicknameLabel;
 @property (nonatomic,strong)UIButton *seeMomentButton;//显示动态
 @property (nonatomic,strong)UIButton *seeH5Button;//显示h5
+@property (nonatomic,strong)UIButton *cameraButton;//
+@property (nonatomic,strong)UIButton *albumButton;//
 
 @end
 
@@ -29,6 +31,8 @@
     [self nicknameLabel];
     [self seeMomentButton];
     [self seeH5Button];
+    [self cameraButton];
+    [self albumButton];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -84,6 +88,36 @@
         }];
     }
     return _seeH5Button;
+}
+- (UIButton *)cameraButton {
+    if (!_cameraButton) {
+        _cameraButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+        _cameraButton.backgroundColor = [UIColor purpleColor];
+        [_cameraButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+        [_cameraButton setImage:[UIImage imageNamed:@"lc_btn_chat_album"] forState:(UIControlStateNormal)];
+        [_cameraButton addTarget:self action:@selector(seeH5ButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
+        [self.view addSubview:_cameraButton];
+        [_cameraButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.view);
+            make.top.equalTo(self.mas_topLayoutGuideBottom).offset(200);
+        }];
+    }
+    return _cameraButton;
+}
+- (UIButton *)albumButton {
+    if (!_albumButton) {
+        _albumButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+        _albumButton.backgroundColor = [UIColor purpleColor];
+        [_albumButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+        [_albumButton setImage:[UIImage imageNamed:@"lc_btn_chat_camera"] forState:(UIControlStateNormal)];
+        [_albumButton addTarget:self action:@selector(seeH5ButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
+        [self.view addSubview:_albumButton];
+        [_albumButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.cameraButton.mas_right).offset(20);
+            make.centerY.equalTo(self.cameraButton);
+        }];
+    }
+    return _albumButton;
 }
 #pragma mark - Action
 - (void)seeMomentButtonAction:(UIButton *)button {

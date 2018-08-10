@@ -8,13 +8,14 @@ target 'LCLive' do
 pod 'LCMediator', :path => '../LCMediator'
 pod 'LCBase', :path => '../LCBase'
 pod 'LCUser', :path => '../LCUser'
+pod 'LCShare', :path => '../LCShare'
 pod 'LCMe', :path => '../LCMe'
 pod 'LCChat', :path => '../LCChat'
 pod 'LCWeb', :path => '../LCWeb'
 pod 'LCMoment', :path => '../LCMoment'
 
-pod 'Masonry', '~> 1.1.0'
-pod 'AFNetworking'
-pod 'YYWebImage', '~> 1.0.5'
+pod 'Masonry', '1.1.0'
+pod 'AFNetworking', '3.2.1'
+pod 'YYWebImage', '1.0.5'
 
 end

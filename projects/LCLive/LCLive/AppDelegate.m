@@ -7,11 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "LCUserModule.h"
-#import "LCWebModule.h"
-#import "LCMomentModule.h"
-#import "LCChatModule.h"
-#import "LCMeModule.h"
 //#import "LCNavigationController.h"
 #import "LCMediatorHeader.h"
 #import "LCChatModuleProtocol.h"
