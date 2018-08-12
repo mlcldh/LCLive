@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
     s.name             = 'LCShare'
     s.version          = '0.1.0'
-    s.summary          = '私信聊天业务组件'
+    s.summary          = '分享组件'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-s.description      = '私信聊天业务组件，包括消息会话列表和聊天详情'
+s.description      = '分享组件'
 
 s.homepage         = 'https://github.com/mlcldh/'
 # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -33,6 +33,7 @@ s.prefix_header_contents = '#import "Masonry.h"','#import "UIImageView+YYWebImag
 s.source_files = 'LCShare/Classes/**/*'
 
 s.vendored_libraries = 'LCShare/Classes/Wechat/*.a'
+s.vendored_frameworks = 'LCShare/Classes/QQ/*.framework'
 s.resource_bundles = {
     'LCShare' => ['LCShare/Resources/*']
 }
@@ -43,6 +44,7 @@ s.libraries = 'stdc++','resolv','z','sqlite3.0'
 s.dependency 'Masonry'
 s.dependency 'AFNetworking'
 s.dependency 'YYWebImage'
+#s.dependency 'Weibo_SDK'
 s.dependency 'LCMediator'
 s.dependency 'LCBase'
 s.static_framework  =  true

@@ -11,5 +11,6 @@ pod 'LCBase', :path => '../../LCBase'
 
 pod 'AFNetworking'
 pod 'Masonry'
+#pod 'Weibo_SDK', :git => 'https://github.com/sinaweibosdk/weibo_ios_sdk.git'
 
 end

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "WXApi.h"
+#import <TencentOpenAPI/TencentOAuth.h>
 
 @interface ViewController ()
 
