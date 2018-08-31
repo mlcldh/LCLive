@@ -53,7 +53,7 @@
         _nicknameLabel = [[UILabel alloc]init];
         _nicknameLabel.backgroundColor = [UIColor purpleColor];
         _nicknameLabel.textColor = [UIColor whiteColor];
-        Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
+        id<LCUserModule> userModuleClass = LCModuleInstanceFromProtocol(@protocol(LCUserModule));
         _nicknameLabel.text = [userModuleClass nickname];
         [self.view addSubview:_nicknameLabel];
         [_nicknameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -127,7 +127,7 @@
         _avatarView = [[UIImageView alloc]init];
 //        _avatarView.backgroundColor = [UIColor purpleColor];
         _avatarView.contentMode = UIViewContentModeScaleAspectFill;
-        Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
+        id<LCUserModule> userModuleClass = LCModuleInstanceFromProtocol(@protocol(LCUserModule));
         [_avatarView yy_setImageWithURL:[NSURL URLWithString:[userModuleClass avatarUrlString]] placeholder:nil];
         [self.view addSubview:_avatarView];
         [_avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -147,7 +147,7 @@
         _userIdLabel = [[UILabel alloc]init];
         _userIdLabel.backgroundColor = [UIColor purpleColor];
         _userIdLabel.textColor = [UIColor whiteColor];
-        Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
+        id<LCUserModule> userModuleClass = LCModuleInstanceFromProtocol(@protocol(LCUserModule));
         _userIdLabel.text = [userModuleClass userId];
         [self.view addSubview:_userIdLabel];
         [_userIdLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -176,15 +176,15 @@
 }
 #pragma mark -
 - (void)test {
-    NSString *hehe = @"LCWhat";
-    const char *name = hehe.UTF8String;
-    Class oneClass = objc_getClass(name);
+//    NSString *hehe = @"LCWhat";
+//    const char *name = hehe.UTF8String;
+//    Class oneClass = objc_getClass(name);
     
-    Class meVCClass =  NSClassFromString(@"LCMeViewController");
-    Class meModuleClass =  NSClassFromString(@"LCMeModule");
-    Class heheClass =  NSClassFromString(@"LCHehe");
-    Class aClass =  NSClassFromString(@"LCUserModule");
-    Class userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
+//    Class meVCClass =  NSClassFromString(@"LCMeViewController");
+//    Class meModuleClass =  NSClassFromString(@"LCMeModule");
+//    Class heheClass =  NSClassFromString(@"LCHehe");
+//    Class aClass =  NSClassFromString(@"LCUserModule");
+    id<LCUserModule> userModuleClass = LCModuleInstanceFromProtocol(@protocol(LCUserModule));
     NSString *userId = [userModuleClass userId];
     NSLog(@"userId = %@",userId);
 }

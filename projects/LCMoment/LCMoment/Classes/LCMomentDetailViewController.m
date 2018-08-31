@@ -20,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"动态详情";
+    self.view.backgroundColor = [UIColor whiteColor];
     [self titleLabel];
     [self momentImageView];
 }

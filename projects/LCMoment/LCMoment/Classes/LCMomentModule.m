@@ -12,11 +12,11 @@
 
 @implementation LCMomentModule
 
-+ (UIViewController *)momentListViewController {
+- (UIViewController *)momentListViewController {
     LCMomentListViewController *vc = [[LCMomentListViewController alloc]init];
     return vc;
 }
-+ (void)pushMomentDetailViewControllerWithMomentId:(NSString *)momentId fromViewController:(UIViewController *)viewController {
+- (void)pushMomentDetailViewControllerWithMomentId:(NSString *)momentId fromViewController:(UIViewController *)viewController {
     LCMomentDetailViewController *momentDetailVC = [[LCMomentDetailViewController alloc]init];
     momentDetailVC.momentId = momentId;
     momentDetailVC.hidesBottomBarWhenPushed = YES;

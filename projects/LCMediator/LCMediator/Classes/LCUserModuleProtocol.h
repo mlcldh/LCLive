@@ -12,12 +12,12 @@
 @protocol LCUserModule <NSObject>
 
 /**用户id*/
-+ (NSString *)userId;
+- (NSString *)userId;
 /**token*/
-+ (NSString *)token;
+- (NSString *)token;
 /**用户昵称*/
-+ (NSString *)nickname;
+- (NSString *)nickname;
 /**用户头像url地址*/
-+ (NSString *)avatarUrlString;
+- (NSString *)avatarUrlString;
 
 @end

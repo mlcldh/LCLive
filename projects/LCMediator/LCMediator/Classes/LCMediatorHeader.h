@@ -8,12 +8,23 @@
 #ifndef LCMediatorHeader_h
 #define LCMediatorHeader_h
 
-/**根据传入的组件协议返回实现该协议的类*/
-NS_INLINE Class LCModuleClassFromProtocol(Protocol *protocol) {
+/**根据传入的组件协议返回实现该协议的类的对象*/
+NS_INLINE id LCModuleInstanceFromProtocol(Protocol *protocol) {
     NSString *className = NSStringFromProtocol(protocol);
     Class aClass = NSClassFromString(className);
-    if ([aClass conformsToProtocol:protocol]){
-        return aClass;
+//    NSLog(@"class %@,%@",className,aClass);
+    static NSMutableDictionary *modulesDictionary = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        modulesDictionary = [NSMutableDictionary dictionary];
+    });
+    id module = modulesDictionary[className];
+    if (!module) {
+        module = [[aClass alloc]init];
+        modulesDictionary[className] = module;
+    }
+    if ([module conformsToProtocol:protocol]){
+        return module;
     }
     return nil;
 }

@@ -10,7 +10,8 @@
 
 @interface LCSessionListViewController ()
 
-@property (nonatomic,strong)UIButton *button;
+@property (nonatomic,strong) UIButton *button;
+@property (nonatomic,strong) NSMapTable *table;
 
 @end
 
@@ -43,9 +44,17 @@
     }
     return _button;
 }
+- (NSMapTable *)table {
+    if (!_table) {
+        _table = [NSMapTable weakToWeakObjectsMapTable];
+    }
+    return _table;
+}
 #pragma mark - Action
 - (void)buttonAction:(UIButton *)button {
     LCUserChatViewController *chatVC = [[LCUserChatViewController alloc]init];
+//    UIViewController *vc = [self.table objectForKey:@"chatVC"];
+    [self.table setObject:chatVC forKey:@"chatVC"];
     chatVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:chatVC animated:YES];
 }

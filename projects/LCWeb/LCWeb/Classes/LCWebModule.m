@@ -11,7 +11,7 @@
 
 @implementation LCWebModule
 
-+ (void)pushWebViewControllerWithUrlString:(NSString *)urlString fromViewController:(UIViewController *)viewController {
+- (void)pushWebViewControllerWithUrlString:(NSString *)urlString fromViewController:(UIViewController *)viewController {
     LCWebViewController *webVC = [[LCWebViewController alloc]init];
     webVC.urlString = urlString;
     [viewController.navigationController pushViewController:webVC animated:YES];

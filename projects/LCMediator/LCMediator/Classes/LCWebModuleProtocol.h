@@ -12,6 +12,6 @@
 @protocol LCWebModule <NSObject>
 
 /**跳转到h5详情*/
-+ (void)pushWebViewControllerWithUrlString:(NSString *)urlString fromViewController:(UIViewController *)viewController;
+- (void)pushWebViewControllerWithUrlString:(NSString *)urlString fromViewController:(UIViewController *)viewController;
 
 @end

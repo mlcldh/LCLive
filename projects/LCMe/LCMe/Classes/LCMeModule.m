@@ -11,7 +11,7 @@
 
 @implementation LCMeModule
 
-+ (UIViewController *)meViewController {
+- (UIViewController *)meViewController {
     LCMeViewController *vc = [[LCMeViewController alloc]init];
     return vc;
 }

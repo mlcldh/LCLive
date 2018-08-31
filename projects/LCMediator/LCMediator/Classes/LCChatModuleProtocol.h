@@ -12,10 +12,10 @@
 @protocol LCChatModule <NSObject>
 
 /***/
-+ (UIViewController *)sessionListViewController;
+- (UIViewController *)sessionListViewController;
 /**读取未读数*/
-+ (NSUInteger)ureandCount;
+- (NSUInteger)ureandCount;
 /**跳转到单聊聊天详情*/
-+ (void)pushUserChatViewControllerWithUserId:(NSString *)userId fromViewController:(UIViewController *)viewController;
+- (void)pushUserChatViewControllerWithUserId:(NSString *)userId fromViewController:(UIViewController *)viewController;
 
 @end

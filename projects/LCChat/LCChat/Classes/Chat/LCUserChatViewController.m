@@ -44,7 +44,7 @@
         _nicknameLabel = [[UILabel alloc]init];
         _nicknameLabel.backgroundColor = [UIColor purpleColor];
         _nicknameLabel.textColor = [UIColor whiteColor];
-        Class<LCUserModule> userModuleClass = LCModuleClassFromProtocol(@protocol(LCUserModule));
+        id<LCUserModule> userModuleClass = LCModuleInstanceFromProtocol(@protocol(LCUserModule));
         [userModuleClass nickname];
         _nicknameLabel.text = [userModuleClass nickname];
         [self.view addSubview:_nicknameLabel];
@@ -121,11 +121,11 @@
 }
 #pragma mark - Action
 - (void)seeMomentButtonAction:(UIButton *)button {
-    Class momentModuleClass = LCModuleClassFromProtocol(@protocol(LCMomentModule));
+    id<LCMomentModule> momentModuleClass = LCModuleInstanceFromProtocol(@protocol(LCMomentModule));
     [momentModuleClass pushMomentDetailViewControllerWithMomentId:@"110" fromViewController:self];
 }
 - (void)seeH5ButtonAction:(UIButton *)button {
-    Class webModuleClass = LCModuleClassFromProtocol(@protocol(LCWebModule));
+    id<LCWebModule> webModuleClass = LCModuleInstanceFromProtocol(@protocol(LCWebModule));
     [webModuleClass pushWebViewControllerWithUrlString:@"https://github.com/mlcldh/" fromViewController:self];
 }
 

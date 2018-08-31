@@ -12,14 +12,14 @@
 
 @implementation LCChatModule
 
-+ (UIViewController *)sessionListViewController {
+- (UIViewController *)sessionListViewController {
     LCSessionListViewController *vc = [[LCSessionListViewController alloc]init];
     return vc;
 }
-+ (NSUInteger)ureandCount {
+- (NSUInteger)ureandCount {
     return 3;
 }
-+ (void)pushUserChatViewControllerWithUserId:(NSString *)userId fromViewController:(UIViewController *)viewController {
+- (void)pushUserChatViewControllerWithUserId:(NSString *)userId fromViewController:(UIViewController *)viewController {
     LCUserChatViewController *userChatVC = [[LCUserChatViewController alloc]init];
     [viewController.navigationController pushViewController:userChatVC animated:YES];
 }
