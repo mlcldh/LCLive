@@ -32,8 +32,8 @@ s.prefix_header_contents = '#import "Masonry.h"','#import "UIImageView+YYWebImag
 
 s.source_files = 'LCShare/Classes/**/*'
 
-s.vendored_libraries = 'LCShare/Classes/Wechat/*.a'
-s.vendored_frameworks = 'LCShare/Classes/QQ/*.framework'
+s.vendored_libraries = 'LCShare/Classes/Wechat/SDK/*.a'
+s.vendored_frameworks = 'LCShare/Classes/QQ/SDK/*.framework'
 s.resource_bundles = {
     'LCShare' => ['LCShare/Resources/*']
 }
