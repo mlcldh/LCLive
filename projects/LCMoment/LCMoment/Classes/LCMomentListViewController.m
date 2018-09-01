@@ -39,7 +39,11 @@
         [self.view addSubview:_seeMomentButton];
         [_seeMomentButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
-            make.top.equalTo(self.mas_topLayoutGuideBottom).offset(50);
+            if (@available(iOS 11.0, *)) {
+                make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(50);
+            } else {
+                make.top.equalTo(self.mas_topLayoutGuideBottom).offset(50);
+            }
         }];
     }
     return _seeMomentButton;

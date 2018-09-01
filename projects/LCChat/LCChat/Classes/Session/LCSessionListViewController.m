@@ -39,7 +39,11 @@
         [self.view addSubview:_button];
         [_button mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
-            make.top.equalTo(self.mas_topLayoutGuideBottom);
+            if (@available(iOS 11.0, *)) {
+                make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+            } else {
+                make.top.equalTo(self.mas_topLayoutGuideBottom);
+            }
         }];
     }
     return _button;

@@ -69,7 +69,11 @@
         [self.view addSubview:_seeMomentButton];
         [_seeMomentButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
-            make.top.equalTo(self.mas_topLayoutGuideBottom).offset(50);
+            if (@available(iOS 11.0, *)) {
+                make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(50);
+            } else {
+                make.top.equalTo(self.mas_topLayoutGuideBottom).offset(50);
+            }
         }];
     }
     return _seeMomentButton;
@@ -84,7 +88,11 @@
         [self.view addSubview:_seeH5Button];
         [_seeH5Button mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
-            make.top.equalTo(self.mas_topLayoutGuideBottom).offset(150);
+            if (@available(iOS 11.0, *)) {
+                make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(150);
+            } else {
+                make.top.equalTo(self.mas_topLayoutGuideBottom).offset(150);
+            }
         }];
     }
     return _seeH5Button;
@@ -99,7 +107,11 @@
         [self.view addSubview:_cameraButton];
         [_cameraButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
-            make.top.equalTo(self.mas_topLayoutGuideBottom).offset(200);
+            if (@available(iOS 11.0, *)) {
+                make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(200);
+            } else {
+                make.top.equalTo(self.mas_topLayoutGuideBottom).offset(200);
+            }
         }];
     }
     return _cameraButton;
