@@ -38,24 +38,24 @@
         UIViewController *vc = nil;
         switch (i) {
             case 0:{
-                id<LCChatModule> moduleClass = LCModuleInstanceFromProtocol(@protocol(LCChatModule));
-                vc = [moduleClass sessionListViewController];
+                LCModuleInstance(moduleInstance, LCChatModule)
+                vc = [moduleInstance sessionListViewController];
             }
                 break;
             case 1:{
-                id<LCMomentModule> moduleClass = LCModuleInstanceFromProtocol(@protocol(LCMomentModule));
-                vc = [moduleClass momentListViewController];
+                LCModuleInstance(moduleInstance, LCMomentModule)
+                vc = [moduleInstance momentListViewController];
             }
                 break;
             case 2:{
-                id<LCMeModule> moduleClass = LCModuleInstanceFromProtocol(@protocol(LCMeModule));
-                vc = [moduleClass meViewController];
+                LCModuleInstance(moduleInstance, LCMeModule)
+                vc = [moduleInstance meViewController];
             }
                 break;
             default:
                 break;
         }
-        NSLog(@"vc = %@",vc);
+//        NSLog(@"vc = %@",vc);
         UITabBarItem *tabBarItem = [[UITabBarItem alloc]initWithTitle:titles[i] image:[UIImage imageNamed:[NSString stringWithFormat:@"lc_root_tab_%@_normal",imageTags[i]]] selectedImage:[UIImage imageNamed:[NSString stringWithFormat:@"lc_root_tab_%@_pressed",imageTags[i]]]];
         vc.tabBarItem = tabBarItem;
         UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:vc];

@@ -53,8 +53,9 @@
         _nicknameLabel = [[UILabel alloc]init];
         _nicknameLabel.backgroundColor = [UIColor purpleColor];
         _nicknameLabel.textColor = [UIColor whiteColor];
-        id<LCUserModule> userModuleClass = LCModuleInstanceFromProtocol(@protocol(LCUserModule));
-        _nicknameLabel.text = [userModuleClass nickname];
+//        id<LCUserModule> userModuleClass = LCModuleInstanceFromProtocol(@protocol(LCUserModule));
+        LCModuleInstance(moduleInstance, LCUserModule)
+        _nicknameLabel.text = [moduleInstance nickname];
         [self.view addSubview:_nicknameLabel];
         [_nicknameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
@@ -127,8 +128,8 @@
         _avatarView = [[UIImageView alloc]init];
 //        _avatarView.backgroundColor = [UIColor purpleColor];
         _avatarView.contentMode = UIViewContentModeScaleAspectFill;
-        id<LCUserModule> userModuleClass = LCModuleInstanceFromProtocol(@protocol(LCUserModule));
-        [_avatarView yy_setImageWithURL:[NSURL URLWithString:[userModuleClass avatarUrlString]] placeholder:nil];
+        LCModuleInstance(moduleInstance, LCUserModule)
+        [_avatarView yy_setImageWithURL:[NSURL URLWithString:[moduleInstance avatarUrlString]] placeholder:nil];
         [self.view addSubview:_avatarView];
         [_avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
             if (@available(iOS 11.0, *)) {
@@ -147,8 +148,8 @@
         _userIdLabel = [[UILabel alloc]init];
         _userIdLabel.backgroundColor = [UIColor purpleColor];
         _userIdLabel.textColor = [UIColor whiteColor];
-        id<LCUserModule> userModuleClass = LCModuleInstanceFromProtocol(@protocol(LCUserModule));
-        _userIdLabel.text = [userModuleClass userId];
+        LCModuleInstance(moduleInstance, LCUserModule)
+        _userIdLabel.text = [moduleInstance userId];
         [self.view addSubview:_userIdLabel];
         [_userIdLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
@@ -184,8 +185,8 @@
 //    Class meModuleClass =  NSClassFromString(@"LCMeModule");
 //    Class heheClass =  NSClassFromString(@"LCHehe");
 //    Class aClass =  NSClassFromString(@"LCUserModule");
-    id<LCUserModule> userModuleClass = LCModuleInstanceFromProtocol(@protocol(LCUserModule));
-    NSString *userId = [userModuleClass userId];
+    LCModuleInstance(moduleInstance, LCUserModule)
+    NSString *userId = [moduleInstance userId];
     NSLog(@"userId = %@",userId);
 }
 
