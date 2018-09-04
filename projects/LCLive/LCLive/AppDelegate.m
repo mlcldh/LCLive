@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 //#import "LCNavigationController.h"
-#import "LCMediatorHeader.h"
 #import "LCChatModuleProtocol.h"
 #import "LCMomentModuleProtocol.h"
 #import "LCMeModuleProtocol.h"
@@ -38,18 +37,18 @@
         UIViewController *vc = nil;
         switch (i) {
             case 0:{
-                LCModuleInstance(moduleInstance, LCChatModule)
-                vc = [moduleInstance sessionListViewController];
+                LCModuleInstance(module, LCChatModule)
+                vc = [module sessionListViewController];
             }
                 break;
             case 1:{
-                LCModuleInstance(moduleInstance, LCMomentModule)
-                vc = [moduleInstance momentListViewController];
+                LCModuleInstance(module, LCMomentModule)
+                vc = [module momentListViewController];
             }
                 break;
             case 2:{
-                LCModuleInstance(moduleInstance, LCMeModule)
-                vc = [moduleInstance meViewController];
+                LCModuleInstance(module, LCMeModule)
+                vc = [module meViewController];
             }
                 break;
             default:

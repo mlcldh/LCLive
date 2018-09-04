@@ -29,6 +29,6 @@ NS_INLINE id LCModuleInstanceFromProtocol(Protocol *protocol) {
     return nil;
 }
 
-#define LCModuleInstance(moduleInstance,ModuleProtocol) id<ModuleProtocol> moduleInstance = LCModuleInstanceFromProtocol(@protocol(ModuleProtocol));
+#define LCModuleInstance(module,LCModuleProtocol) id<LCModuleProtocol> module = LCModuleInstanceFromProtocol(@protocol(LCModuleProtocol));
 
 #endif /* LCMediatorHeader_h */

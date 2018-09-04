@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-    s.prefix_header_contents = '#import "Masonry.h"','#import "UIImageView+YYWebImage.h"'
+    s.prefix_header_contents = '#import "Masonry.h"','#import "UIImageView+YYWebImage.h"','#import "LCMediatorHeader.h"'
 
     s.source_files = 'LCMe/Classes/**/*'
 

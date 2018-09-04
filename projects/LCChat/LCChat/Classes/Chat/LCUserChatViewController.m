@@ -6,7 +6,6 @@
 //
 
 #import "LCUserChatViewController.h"
-#import "LCMediatorHeader.h"
 #import "LCUserModuleProtocol.h"
 //#import <LCMediator/LCWebModuleProtocol.h>
 #import "LCWebModuleProtocol.h"
@@ -44,9 +43,9 @@
         _nicknameLabel = [[UILabel alloc]init];
         _nicknameLabel.backgroundColor = [UIColor purpleColor];
         _nicknameLabel.textColor = [UIColor whiteColor];
-        LCModuleInstance(moduleInstance, LCUserModule)
-        [moduleInstance nickname];
-        _nicknameLabel.text = [moduleInstance nickname];
+        LCModuleInstance(module, LCUserModule)
+        [module nickname];
+        _nicknameLabel.text = [module nickname];
         [self.view addSubview:_nicknameLabel];
         [_nicknameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
@@ -133,12 +132,12 @@
 }
 #pragma mark - Action
 - (void)seeMomentButtonAction:(UIButton *)button {
-    LCModuleInstance(moduleInstance, LCMomentModule)
-    [moduleInstance pushMomentDetailViewControllerWithMomentId:@"110" fromViewController:self];
+    LCModuleInstance(module, LCMomentModule)
+    [module pushMomentDetailViewControllerWithMomentId:@"110" fromViewController:self];
 }
 - (void)seeH5ButtonAction:(UIButton *)button {
-    LCModuleInstance(moduleInstance, LCWebModule)
-    [moduleInstance pushWebViewControllerWithUrlString:@"https://github.com/mlcldh/" fromViewController:self];
+    LCModuleInstance(module, LCWebModule)
+    [module pushWebViewControllerWithUrlString:@"https://github.com/mlcldh/" fromViewController:self];
 }
 
 @end

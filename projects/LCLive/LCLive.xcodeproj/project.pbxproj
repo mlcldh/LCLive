@@ -29,6 +29,7 @@
 		8DCCE1BF20EF4A71002EA6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DCCE1C120EF4A71002EA6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DCCE1C220EF4A71002EA6AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8DE14F3A213E18E50079658F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9D04F454560AD15B0F006D1E /* Pods-LCLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCLive/Pods-LCLive.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +81,7 @@
 				8DCCE1B920EF4A71002EA6AE /* Main.storyboard */,
 				8DCCE1BC20EF4A71002EA6AE /* Assets.xcassets */,
 				8DCCE1BE20EF4A71002EA6AE /* LaunchScreen.storyboard */,
+				8DE14F3A213E18E50079658F /* PrefixHeader.pch */,
 				8DCCE1C120EF4A71002EA6AE /* Info.plist */,
 				8DCCE1C220EF4A71002EA6AE /* main.m */,
 			);
@@ -360,6 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JG8HG83X27;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LCLive/PrefixHeader.pch";
 				INFOPLIST_FILE = LCLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -376,6 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JG8HG83X27;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LCLive/PrefixHeader.pch";
 				INFOPLIST_FILE = LCLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
