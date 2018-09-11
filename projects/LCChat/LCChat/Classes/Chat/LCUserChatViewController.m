@@ -121,6 +121,7 @@
         _albumButton.backgroundColor = [UIColor purpleColor];
         [_albumButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
         [_albumButton setImage:[UIImage imageNamed:@"lc_btn_chat_camera"] forState:(UIControlStateNormal)];
+//        [_albumButton setImage:[UIImage imageNamed:@"lc_chat_icon_message_top_gift"] forState:(UIControlStateNormal)];
         [_albumButton addTarget:self action:@selector(seeH5ButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
         [self.view addSubview:_albumButton];
         [_albumButton mas_makeConstraints:^(MASConstraintMaker *make) {

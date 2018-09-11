@@ -32,9 +32,10 @@ Pod::Spec.new do |s|
 
     s.source_files = 'LCChat/Classes/**/*'
 
-   s.resource_bundles = {
-     'LCChat' => ['LCChat/Resources/*']
-   }
+#    s.resources = 'LCChat/Resources/**/*'
+#   s.resource_bundles = {
+#     'LCChat' => ['LCChat/Resources/*']
+#   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore'
@@ -43,5 +44,5 @@ Pod::Spec.new do |s|
    s.dependency 'YYWebImage'
    s.dependency 'LCMediator'
    s.dependency 'LCBase'
-   s.static_framework  =  true
+#   s.static_framework  =  true
   end
