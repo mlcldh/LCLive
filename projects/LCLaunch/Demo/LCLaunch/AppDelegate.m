@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  LCLive
+//  LCLaunch
 //
-//  Created by MengLingChao on 2018/7/6.
+//  Created by MengLingChao on 2018/9/26.
 //  Copyright © 2018年 MengLingChao. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "LCLaunchModuleProtocol.h"
 
 @interface AppDelegate ()
 
@@ -18,10 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    LCModuleInstance(module, LCLaunchModule)
-    [module handleDidFinishLaunchingApplication:application options:launchOptions window:self.window];
-    
     return YES;
 }
 

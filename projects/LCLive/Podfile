@@ -13,5 +13,6 @@ pod 'LCMe', :path => '../LCMe'
 pod 'LCChat', :path => '../LCChat'
 pod 'LCWeb', :path => '../LCWeb'
 pod 'LCMoment', :path => '../LCMoment'
+pod 'LCLaunch', :path => '../LCLaunch'
 
 end
