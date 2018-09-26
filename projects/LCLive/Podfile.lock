@@ -15,9 +15,9 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - LCBase (0.1.0):
-    - AFNetworking
-    - Masonry
-    - YYWebImage
+    - AFNetworking (= 3.2.1)
+    - Masonry (= 1.1.0)
+    - YYWebImage (= 1.0.5)
   - LCChat (0.1.0):
     - AFNetworking
     - LCBase
@@ -62,7 +62,6 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
-  - AFNetworking (= 3.2.1)
   - LCBase (from `../LCBase`)
   - LCChat (from `../LCChat`)
   - LCMe (from `../LCMe`)
@@ -71,8 +70,6 @@ DEPENDENCIES:
   - LCShare (from `../LCShare`)
   - LCUser (from `../LCUser`)
   - LCWeb (from `../LCWeb`)
-  - Masonry (= 1.1.0)
-  - YYWebImage (= 1.0.5)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -102,8 +99,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  LCBase: e6514459771276cfb071a690da6d7411ec9c4465
-  LCChat: b7007817a6b6028d798a9c400a2fdbac9052fc06
+  LCBase: 52cf8dbbce44da1daef82be84eeb4c4f23372b1a
+  LCChat: ee2dfc9591b3340373dd1890fe64e255adc87956
   LCMe: caeb05132b5f16d1c3e1226191a28069ff2019a2
   LCMediator: 7d07db2be32c1579b0388394f87f3075c861d8d0
   LCMoment: 714d35eafc7defb0af64591ac9abf1acca571f36
@@ -115,6 +112,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 6f182fdcefff70cf122404b66670e31accdd1d6e
+PODFILE CHECKSUM: 99556571edd1df373a02abe63c354ebcb9caf765
 
 COCOAPODS: 1.5.0

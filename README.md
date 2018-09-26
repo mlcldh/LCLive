@@ -4,7 +4,7 @@
 
 主工程依赖这些组件。LCLive是主工程。 LCMediator是调度层中间件。 LCBase是基础模块，封装公共类和方法。 LCWeb是h5、weex模块。 LCChat是私信模块。 LCMomment是朋友圈模块。
 
-![图片 7](https://raw.github.com/mlcldh/LCLive/master/images/图片7.png)
+![图片 7](https://raw.github.com/mlcldh/LCLive/master/images/图片7.jpg)
 
 中间件是LCMediator，它里面定义了User、私信、Web、Moment等协议，供相应组件实现了和供其他组件调用。
 
