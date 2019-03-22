@@ -4,7 +4,28 @@
 
 主工程依赖这些组件。LCLive是主工程。 LCMediator是调度层中间件。 LCBase是基础模块，封装公共类和方法。 LCWeb是h5、weex模块。 LCChat是私信模块。 LCMomment是朋友圈模块。
 
-![图片 7](https://raw.github.com/mlcldh/LCLive/master/images/图片7.jpg)
+Podfile如下：
+
+```objective-c
+platform :ios, '8.0'
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'LCLive' do
+
+pod 'LCMediator', :path => '../LCMediator'
+pod 'LCBase', :path => '../LCBase'
+pod 'LCUser', :path => '../LCUser'
+pod 'LCShare', :path => '../LCShare'
+pod 'LCMe', :path => '../LCMe'
+pod 'LCChat', :path => '../LCChat'
+pod 'LCWeb', :path => '../LCWeb'
+pod 'LCMoment', :path => '../LCMoment'
+pod 'LCLaunch', :path => '../LCLaunch'
+
+end
+```
 
 中间件是LCMediator，它里面定义了User、私信、Web、Moment等协议，供相应组件实现了和供其他组件调用。
 
@@ -14,23 +35,119 @@
 
 LCMediator的LCMediatorHeader里通过传入的组件协议返回实现该协议的类的实例。 方法LCModuleInstanceFromProtocol获取到的也就只是实例对象。调用组件协议实例时，不需要提前注册，LCModuleInstanceFromProtocol内部做了懒加载处理。
 
-![图片 9](https://raw.github.com/mlcldh/LCLive/master/images/图片9.jpg)
+```objective-c
+/**根据传入的组件协议返回实现该协议的类的对象*/
+NS_INLINE id LCModuleInstanceFromProtocol(Protocol *protocol) {
+    NSString *className = NSStringFromProtocol(protocol);
+    Class aClass = NSClassFromString(className);
+//    NSLog(@"class %@,%@",className,aClass);
+    static NSMutableDictionary *modulesDictionary = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        modulesDictionary = [NSMutableDictionary dictionary];
+    });
+    id module = modulesDictionary[className];
+    if (!module) {
+        module = [[aClass alloc]init];
+        modulesDictionary[className] = module;
+    }
+    if ([module conformsToProtocol:protocol]){
+        return module;
+    }
+    return nil;
+}
 
-![图片 10](https://raw.github.com/mlcldh/LCLive/master/images/图片10.jpg)
+#define LCModuleInstance(module,LCModuleProtocol) id<LCModuleProtocol> module = LCModuleInstanceFromProtocol(@protocol(LCModuleProtocol));
+#define LCGetModuleInstance(LCModuleProtocol) ((id<LCModuleProtocol>)(LCModuleInstanceFromProtocol(@protocol(LCModuleProtocol))))
+```
 
-![图片 11](https://raw.github.com/mlcldh/LCLive/master/images/图片11.png)
 
-![图片 12](https://raw.github.com/mlcldh/LCLive/master/images/图片12.jpg)
 
-![图片 13](https://raw.github.com/mlcldh/LCLive/master/images/图片13.jpg)
+```objective-c
+/**用户信息模块*/
+@protocol LCUserModule <NSObject>
+
+/**用户id*/
+- (NSString *)userId;
+/**token*/
+- (NSString *)token;
+/**用户昵称*/
+- (NSString *)nickname;
+/**用户头像url地址*/
+- (NSString *)avatarUrlString;
+
+@end
+```
+
+
+
+```objective-c
+@interface LCUserModule : NSObject<LCUserModule>
+
+@end
+```
+
+
+
+```objective-c
+@implementation LCUserModule
+
+- (NSString *)userId {
+    return @"abc123100";
+}
+- (NSString *)token {
+    return @"qwe007what";
+}
+- (NSString *)nickname {
+    return @"李明";
+}
+- (NSString *)avatarUrlString {
+    return @"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3843887011,4044287239&fm=173&app=25&f=JPEG?w=218&h=146&s=F81821D40331ABCC106BAA8003008088";
+//    return @"https://avatar.csdn.net/7/5/6/1_mlcldh.jpg?1532075030";
+}
+
+@end
+```
+
+```objective-c
+_nicknameLabel.text = [LCGetModuleInstance(LCUserModule) nickname];
+```
 
 LCWeb是h5、weex模块。 LCWebModule里面实现协议提供跳转到H5的方法。
 
-![图片 14](https://raw.github.com/mlcldh/LCLive/master/images/图片14.png)
+```objective-c
+@implementation LCWebModule
+
+- (void)pushWebViewControllerWithUrlString:(NSString *)urlString fromViewController:(UIViewController *)viewController {
+    LCWebViewController *webVC = [[LCWebViewController alloc]init];
+    webVC.urlString = urlString;
+    [viewController.navigationController pushViewController:webVC animated:YES];
+}
+
+@end
+```
 
 LCChat是私信模块。LCChatModule提供读取消息未读数和跳转到单例详情的方法。
 
-![图片 15](https://raw.github.com/mlcldh/LCLive/master/images/图片15.png)
+```objective-c
+@implementation LCChatModule
+
+- (UIViewController *)sessionListViewController {
+    LCSessionListViewController *vc = [[LCSessionListViewController alloc]init];
+    return vc;
+}
+- (NSUInteger)ureandCount {
+    return 3;
+}
+- (void)pushUserChatViewControllerWithUserId:(NSString *)userId fromViewController:(UIViewController *)viewController {
+    LCUserChatViewController *userChatVC = [[LCUserChatViewController alloc]init];
+    [viewController.navigationController pushViewController:userChatVC animated:YES];
+}
+
+@end
+```
+
+
 
 #### 优点：
 
@@ -51,6 +168,6 @@ LCChat是私信模块。LCChatModule提供读取消息未读数和跳转到单�
 
 1. 组件协议的方法都要写成实例方法，不要写成类方法。
 2. 组件协议的方法都要实现，因为调用时不会去判断方法有没有实现。
-3. 获取组件协议实现的实例对象，只能使用LCModuleInstance(module,LCModuleProtocol) 这个宏，从而避免直接使用LCModuleInstanceFromProtocol获取到实现类，让实现类执行了其并不遵守的协议方法。
+3. 获取组件协议实现的实例对象，只能使用LCModuleInstance(module,LCModuleProtocol) 或LCGetModuleInstance(LCModuleProtocol)这两个个宏，从而避免直接使用LCModuleInstanceFromProtocol获取到实现类，让实现类执行了其并不遵守的协议方法。
 4. 组件协议实现的实例对象只是用来负责组件通信的，不用用它们来存储其他东西，因为这些事例对象一直不会去释放，存储太多东西，容易出现内存占用过多的问题。
 

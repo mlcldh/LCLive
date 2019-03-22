@@ -32,14 +32,14 @@ Pod::Spec.new do |s|
   
     s.source_files = 'LCUser/Classes/**/*'
 
-   s.resource_bundles = {
-     'LCUser' => ['LCUser/Resources/*.png']
-   }
+#   s.resource_bundles = {
+#     'LCUser' => ['LCUser/Resources/*.png']
+#   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore'
    s.dependency 'AFNetworking'
    s.dependency 'Masonry'
    s.dependency 'LCMediator'
-   s.static_framework  =  true
+#   s.static_framework  =  true
   end

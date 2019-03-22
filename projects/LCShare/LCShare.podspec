@@ -34,9 +34,9 @@ s.source_files = 'LCShare/Classes/**/*'
 
 s.vendored_libraries = 'LCShare/Classes/Wechat/SDK/*.a'
 s.vendored_frameworks = 'LCShare/Classes/QQ/SDK/*.framework'
-s.resource_bundles = {
-    'LCShare' => ['LCShare/Resources/*']
-}
+#s.resource_bundles = {
+#    'LCShare' => ['LCShare/Resources/*']
+#}
 
 # s.public_header_files = 'Pod/Classes/**/*.h'
 s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore', 'VideoToolbox','MediaPlayer','CoreMedia', 'CoreGraphics', 'AVFoundation', 'AudioToolbox','SystemConfiguration','CoreTelephony'
@@ -47,5 +47,5 @@ s.dependency 'YYWebImage'
 #s.dependency 'Weibo_SDK'
 s.dependency 'LCMediator'
 s.dependency 'LCBase'
-s.static_framework  =  true
+#s.static_framework  =  true
 end

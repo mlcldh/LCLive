@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.view.backgroundColor = [UIColor lightGrayColor];
 //    NSString *hehe = @"LCHehe";
 //    const char *name = hehe.UTF8String;
 //    Class oneClass = objc_getClass(name);

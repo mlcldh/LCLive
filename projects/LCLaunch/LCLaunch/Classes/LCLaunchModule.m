@@ -29,18 +29,15 @@
         UIViewController *vc = nil;
         switch (i) {
             case 0:{
-                LCModuleInstance(module, LCChatModule)
-                vc = [module sessionListViewController];
+                vc = [LCGetModuleInstance(LCChatModule) sessionListViewController];
             }
                 break;
             case 1:{
-                LCModuleInstance(module, LCMomentModule)
-                vc = [module momentListViewController];
+                vc = [LCGetModuleInstance(LCMomentModule) momentListViewController];
             }
                 break;
             case 2:{
-                LCModuleInstance(module, LCMeModule)
-                vc = [module meViewController];
+                vc = [LCGetModuleInstance(LCMeModule) meViewController];
             }
                 break;
             default:

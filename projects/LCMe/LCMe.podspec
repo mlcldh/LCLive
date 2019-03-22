@@ -32,9 +32,9 @@ Pod::Spec.new do |s|
 
     s.source_files = 'LCMe/Classes/**/*'
 
-   s.resource_bundles = {
-     'LCMe' => ['LCMe/Resources/*.png']
-   }
+#   s.resource_bundles = {
+#     'LCMe' => ['LCMe/Resources/*.png']
+#   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore'
@@ -42,5 +42,5 @@ Pod::Spec.new do |s|
    s.dependency 'AFNetworking'
    s.dependency 'YYWebImage'
    s.dependency 'LCMediator'
-   s.static_framework  =  true
+#   s.static_framework  =  true
   end

@@ -74,7 +74,7 @@ DEPENDENCIES:
   - LCWeb (from `../LCWeb`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Masonry
     - YYCache
@@ -103,20 +103,20 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  LCBase: 52cf8dbbce44da1daef82be84eeb4c4f23372b1a
-  LCChat: ee2dfc9591b3340373dd1890fe64e255adc87956
-  LCLaunch: 1ecfffdd4a972418ca08946c46811953944b5b84
-  LCMe: caeb05132b5f16d1c3e1226191a28069ff2019a2
-  LCMediator: 7d07db2be32c1579b0388394f87f3075c861d8d0
-  LCMoment: 714d35eafc7defb0af64591ac9abf1acca571f36
-  LCShare: 7945f3fe65ef13efa68d392b25d9164c7f3cd963
-  LCUser: e8656e1bc3ea72ef9e0bae1ae4644bb14cec270d
-  LCWeb: fa18a4a7aef2aa379ee61178b00a6d4345656483
+  LCBase: 95529e08ffbe467edce31befbffc86b4ec9dfab5
+  LCChat: c381beeab198e7a8120cabfa06be17d98f9e258a
+  LCLaunch: 7c2949ada6c814b69bd0dc30b48254ecba688196
+  LCMe: fd847bf10aae6a48ae7ed25cdf9c2cd92d485cd6
+  LCMediator: 9534e44e44ce91ee56838cefb92b3c47b0fe036c
+  LCMoment: cc00212882dc5205850fff0864b093d715a86932
+  LCShare: 1d8289ef668712df1db49b642748c472ae130359
+  LCUser: 77975637696c011e1c35ed52508707bdd4bfc753
+  LCWeb: 76ea429366fb7d72738d8047beefc61fa4d3a671
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 92be64dd8c441ba7ba1239f0724b457a4a55c3cb
+PODFILE CHECKSUM: fe90e93f0ba7a5e04bd5658eba033ba3a57252fa
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.0

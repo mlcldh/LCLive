@@ -50,8 +50,7 @@
         _nicknameLabel.backgroundColor = [UIColor purpleColor];
         _nicknameLabel.textColor = [UIColor whiteColor];
 //        id<LCUserModule> userModuleClass = LCModuleInstanceFromProtocol(@protocol(LCUserModule));
-        LCModuleInstance(module, LCUserModule)
-        _nicknameLabel.text = [module nickname];
+        _nicknameLabel.text = [LCGetModuleInstance(LCUserModule) nickname];
         [self.view addSubview:_nicknameLabel];
         [_nicknameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
@@ -124,8 +123,7 @@
         _avatarView = [[UIImageView alloc]init];
 //        _avatarView.backgroundColor = [UIColor purpleColor];
         _avatarView.contentMode = UIViewContentModeScaleAspectFill;
-        LCModuleInstance(module, LCUserModule)
-        [_avatarView yy_setImageWithURL:[NSURL URLWithString:[module avatarUrlString]] placeholder:nil];
+        [_avatarView yy_setImageWithURL:[NSURL URLWithString:[LCGetModuleInstance(LCUserModule) avatarUrlString]] placeholder:nil];
         [self.view addSubview:_avatarView];
         [_avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
             if (@available(iOS 11.0, *)) {
@@ -144,8 +142,7 @@
         _userIdLabel = [[UILabel alloc]init];
         _userIdLabel.backgroundColor = [UIColor purpleColor];
         _userIdLabel.textColor = [UIColor whiteColor];
-        LCModuleInstance(module, LCUserModule)
-        _userIdLabel.text = [module userId];
+        _userIdLabel.text = [LCGetModuleInstance(LCUserModule)  userId];
         [self.view addSubview:_userIdLabel];
         [_userIdLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
@@ -181,8 +178,7 @@
 //    Class meModuleClass =  NSClassFromString(@"LCMeModule");
 //    Class heheClass =  NSClassFromString(@"LCHehe");
 //    Class aClass =  NSClassFromString(@"LCUserModule");
-    LCModuleInstance(module, LCUserModule)
-    NSString *userId = [module userId];
+    NSString *userId = [LCGetModuleInstance(LCUserModule)  userId];
     NSLog(@"userId = %@",userId);
 }
 

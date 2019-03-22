@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LCLaunchModuleProtocol.h"
+//#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +20,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    LCModuleInstance(module, LCLaunchModule)
-    [module handleDidFinishLaunchingApplication:application options:launchOptions window:self.window];
+//    ViewController *vc = [[ViewController alloc]init];
+//    self.window.rootViewController = vc;
+//    [self.window makeKeyAndVisible];
+    [LCGetModuleInstance(LCLaunchModule) handleDidFinishLaunchingApplication:application options:launchOptions window:self.window];
     
     return YES;
 }

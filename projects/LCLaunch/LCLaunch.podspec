@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = '用户信息业务组件'
+  s.description      = 'app启动业务组件'
 
   s.homepage         = 'https://github.com/mlcldh/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-    s.prefix_header_contents = '#import "Masonry.h"','#import "UIImageView+YYWebImage.h"','#import "LCMediatorHeader.h"'
+    s.prefix_header_contents = '#import "LCMediatorHeader.h"'
   
     s.source_files = 'LCLaunch/Classes/**/*'
 

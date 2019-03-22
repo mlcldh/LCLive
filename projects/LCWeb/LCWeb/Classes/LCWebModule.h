@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <LCMediator/LCWebModuleProtocol.h>
+//#import <LCMediator/LCWebModuleProtocol.h>
+#import "LCWebModuleProtocol.h"
 
 @interface LCWebModule : NSObject<LCWebModule>
 

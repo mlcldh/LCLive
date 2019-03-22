@@ -43,9 +43,7 @@
         _nicknameLabel = [[UILabel alloc]init];
         _nicknameLabel.backgroundColor = [UIColor purpleColor];
         _nicknameLabel.textColor = [UIColor whiteColor];
-        LCModuleInstance(module, LCUserModule)
-        [module nickname];
-        _nicknameLabel.text = [module nickname];
+        _nicknameLabel.text = [LCGetModuleInstance(LCUserModule) nickname];
         [self.view addSubview:_nicknameLabel];
         [_nicknameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
@@ -133,12 +131,10 @@
 }
 #pragma mark - Action
 - (void)seeMomentButtonAction:(UIButton *)button {
-    LCModuleInstance(module, LCMomentModule)
-    [module pushMomentDetailViewControllerWithMomentId:@"110" fromViewController:self];
+    [LCGetModuleInstance(LCMomentModule) pushMomentDetailViewControllerWithMomentId:@"110" fromViewController:self];
 }
 - (void)seeH5ButtonAction:(UIButton *)button {
-    LCModuleInstance(module, LCWebModule)
-    [module pushWebViewControllerWithUrlString:@"https://github.com/mlcldh/" fromViewController:self];
+    [LCGetModuleInstance(LCWebModule) pushWebViewControllerWithUrlString:@"https://github.com/mlcldh/" fromViewController:self];
 }
 
 @end

@@ -32,13 +32,13 @@ s.prefix_header_contents = '#import "LCMediatorHeader.h"'
 
     s.source_files = 'LCMediator/Classes/**/*'
 
-   s.resource_bundles = {
-     'LCMediator' => ['LCMediator/Resources/*.png']
-   }
+#   s.resource_bundles = {
+#     'LCMediator' => ['LCMediator/Resources/*.png']
+#   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore'
    s.dependency 'AFNetworking'
    s.dependency 'Masonry'
-   s.static_framework  =  true
+#   s.static_framework  =  true
   end
