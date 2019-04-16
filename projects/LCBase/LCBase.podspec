@@ -42,6 +42,7 @@ Pod::Spec.new do |s|
    s.dependency 'Masonry', '1.1.0'
    s.dependency 'AFNetworking', '3.2.1'
    s.dependency 'YYWebImage', '1.0.5'
+   s.dependency 'LCMediator'
 #   s.static_framework  =  true
 
   end

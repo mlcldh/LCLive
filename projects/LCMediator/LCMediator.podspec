@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-s.prefix_header_contents = '#import "LCMediatorHeader.h"'
+  s.prefix_header_contents = '#import "LCMediatorHeader.h"'
 
     s.source_files = 'LCMediator/Classes/**/*'
 
@@ -38,7 +38,7 @@ s.prefix_header_contents = '#import "LCMediatorHeader.h"'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore'
-   s.dependency 'AFNetworking'
-   s.dependency 'Masonry'
+#   s.dependency 'AFNetworking'
+#   s.dependency 'Masonry'
 #   s.static_framework  =  true
   end
