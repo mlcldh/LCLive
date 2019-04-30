@@ -16,7 +16,7 @@
     LCSessionListViewController *vc = [[LCSessionListViewController alloc]init];
     return vc;
 }
-- (NSUInteger)ureandCount {
+- (NSUInteger)unreadCount {
     return 3;
 }
 - (void)pushUserChatViewControllerWithUserId:(NSString *)userId fromViewController:(UIViewController *)viewController {

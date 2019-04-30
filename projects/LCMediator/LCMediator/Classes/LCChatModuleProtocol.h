@@ -14,7 +14,7 @@
 /***/
 - (UIViewController *)sessionListViewController;
 /**读取未读数*/
-- (NSUInteger)ureandCount;
+- (NSUInteger)unreadCount;
 /**跳转到单聊聊天详情*/
 - (void)pushUserChatViewControllerWithUserId:(NSString *)userId fromViewController:(UIViewController *)viewController;
 
