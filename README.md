@@ -2,7 +2,7 @@
 讲解通过协议实现组件化解耦的直播demo。
 现在是将各个组件代码和主工程放到了一个Git工程里，当然实际应该是放到不同Git工程的。
 
-主工程依赖这些组件。LCLive是主工程。 LCMediator是调度层中间件。 LCBase是基础模块，封装公共类和方法。LCShare是分享模块。LCUser是用户信息模块。 LCWeb是h5、weex模块。 LCChat是私信模块。 LCMomment是朋友圈模块。LCMe是用户信息展示模块。LCLaunchModule是负责处理app启动后操作的模块。
+主工程依赖这些组件。LCLive是主工程。 LCMediator是调度层中间件。 LCBase是基础模块，封装公共类和方法。LCShare是分享模块。LCUser是用户信息模块。 LCWeb是h5、weex模块。 LCChat是私信模块。 LCMomment是动态模块。LCMe是用户信息展示模块。LCLaunchModule是负责处理app启动后操作的模块。
 
 Podfile如下：
 

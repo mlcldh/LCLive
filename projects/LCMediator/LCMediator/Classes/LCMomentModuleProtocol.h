@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-/**朋友圈模块协议*/
+/**动态模块协议*/
 @protocol LCMomentModule <NSObject>
 
 /***/

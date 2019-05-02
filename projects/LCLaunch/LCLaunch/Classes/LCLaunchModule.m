@@ -22,7 +22,7 @@
     //    [LCMomentModule class];
     //    [LCMeModule class];
     
-    NSArray *titles = @[@"消息",@"朋友圈",@"我的"];
+    NSArray *titles = @[@"消息",@"动态",@"我的"];
     NSArray *imageTags = @[@"message",@"moment",@"me"];
     NSMutableArray *viewControllers = [NSMutableArray array];
     for (NSInteger i = 0; i < titles.count; i ++) {

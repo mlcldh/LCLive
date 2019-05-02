@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"朋友圈";
+    self.title = @"动态";
     [self seeMomentButton];
 //    [self tableView];
 }
