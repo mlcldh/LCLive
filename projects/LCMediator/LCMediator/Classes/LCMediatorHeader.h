@@ -29,7 +29,9 @@ NS_INLINE id LCModuleInstanceFromProtocol(Protocol *protocol) {
     return nil;
 }
 
+//将模块实例赋值到变量module，适合局部代码获取多次模块实例的情况
 #define LCModuleInstance(module,LCModuleProtocol) id<LCModuleProtocol> module = LCModuleInstanceFromProtocol(@protocol(LCModuleProtocol));
+//返回模块实例，适合局部代码获取一次模块实例的情况
 #define LCGetModuleInstance(LCModuleProtocol) ((id<LCModuleProtocol>)(LCModuleInstanceFromProtocol(@protocol(LCModuleProtocol))))
 
 #endif /* LCMediatorHeader_h */

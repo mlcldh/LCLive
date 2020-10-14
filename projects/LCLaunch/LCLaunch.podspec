@@ -40,5 +40,7 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'CoreFoundation', 'QuartzCore'
    s.static_framework  =  true
+   
+   s.dependency 'LCMediator'
 
   end

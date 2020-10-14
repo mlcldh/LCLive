@@ -16,24 +16,32 @@ PODS:
     - AFNetworking/NSURLSession
   - LCBase (0.1.0):
     - AFNetworking (= 3.2.1)
-    - LCMediator
     - Masonry (= 1.1.0)
     - YYWebImage (= 1.0.5)
   - LCChat (0.1.0):
     - LCBase
-  - LCLaunch (0.1.0)
+    - LCMediator
+  - LCLaunch (0.1.0):
+    - LCMediator
   - LCMe (0.1.0):
     - LCBase
+    - LCMediator
+    - MLCKit/Category
   - LCMediator (0.1.0)
   - LCMoment (0.1.0):
     - LCBase
+    - LCMediator
   - LCShare (0.1.0):
     - LCBase
+    - LCMediator
   - LCUser (0.1.0):
     - LCMediator
   - LCWeb (0.1.0):
     - LCBase
+    - LCMediator
   - Masonry (1.1.0)
+  - MLCKit/Category (0.0.2)
+  - MLCKit/Macro (0.0.2)
   - YYCache (1.0.4)
   - YYImage (1.0.4):
     - YYImage/Core (= 1.0.4)
@@ -52,9 +60,11 @@ DEPENDENCIES:
   - LCShare (from `../LCShare`)
   - LCUser (from `../LCUser`)
   - LCWeb (from `../LCWeb`)
+  - MLCKit/Category (from `https://github.com/mlcldh/MLCKit.git`, commit `736fd8e`)
+  - MLCKit/Macro (from `https://github.com/mlcldh/MLCKit.git`, commit `736fd8e`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - Masonry
     - YYCache
@@ -80,23 +90,32 @@ EXTERNAL SOURCES:
     :path: "../LCUser"
   LCWeb:
     :path: "../LCWeb"
+  MLCKit:
+    :commit: 736fd8e
+    :git: https://github.com/mlcldh/MLCKit.git
+
+CHECKOUT OPTIONS:
+  MLCKit:
+    :commit: 736fd8e
+    :git: https://github.com/mlcldh/MLCKit.git
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  LCBase: 8476cfbf987ebe2f70348f44f310bce20c1a3369
-  LCChat: 38336ba90e8d054023510a673f03d80a5f7ef4d5
-  LCLaunch: 7c2949ada6c814b69bd0dc30b48254ecba688196
-  LCMe: e5fe4d724f90fe4baed5026f8e51fb22429bd8a8
-  LCMediator: 3f83750a0fadd7de47df62932b2960bdc92ab621
-  LCMoment: 818748402445b3eff2dd5195a1115074bf3d023e
-  LCShare: 66e1abcf212de54dc2fcb3eb7c5886f15905f8d1
+  LCBase: 50bd0945eddd53378d8fffc0c9083cf168fc10cb
+  LCChat: ebd3866406625e5d7067d32b0d8741372150c0be
+  LCLaunch: d2e265dff2d8c4452843a4dbbfbfc08ce81ae50e
+  LCMe: 56ceec1cb369278b9aef91f4a31440209562d2f3
+  LCMediator: 22fd62a0b99465fb45fd1eddf0e6fd11dcccde73
+  LCMoment: ad97f63161e782de9ceb450d968224c5420a63d9
+  LCShare: f9df98a9875b56cc6d2413a88c1ed97114dcab52
   LCUser: 6fcc7e4a50d519c5a3edc6f3341dbc32cab77e00
-  LCWeb: 41f5932b203cfc401f72523c939517a5271adc73
+  LCWeb: cf777b018a3d49240be3213c925bd9e9c44d3203
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MLCKit: 5c89def1783d8fa910da6c4706cc59428a533742
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: fe90e93f0ba7a5e04bd5658eba033ba3a57252fa
+PODFILE CHECKSUM: e3e0b34633c6f90a025f8f9684b3e1230b7fea9c
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.9.3

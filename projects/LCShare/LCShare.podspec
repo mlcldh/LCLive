@@ -45,7 +45,7 @@ s.libraries = 'stdc++','resolv','z','sqlite3.0'
 #s.dependency 'AFNetworking'
 #s.dependency 'YYWebImage'
 #s.dependency 'Weibo_SDK'
-#s.dependency 'LCMediator'
+s.dependency 'LCMediator'
 s.dependency 'LCBase'
 #s.static_framework  =  true
 end

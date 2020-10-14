@@ -5,14 +5,17 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'LCLive' do
 
-pod 'LCMediator', :path => '../LCMediator'
-pod 'LCBase', :path => '../LCBase'
-pod 'LCUser', :path => '../LCUser'
-pod 'LCShare', :path => '../LCShare'
-pod 'LCMe', :path => '../LCMe'
-pod 'LCChat', :path => '../LCChat'
-pod 'LCWeb', :path => '../LCWeb'
-pod 'LCMoment', :path => '../LCMoment'
-pod 'LCLaunch', :path => '../LCLaunch'
+pod 'LCMediator', :path => '../LCMediator'#中间件
+pod 'LCBase', :path => '../LCBase'#基础模块
+pod 'LCUser', :path => '../LCUser'#用户信息模块
+pod 'LCShare', :path => '../LCShare'#分享模块
+pod 'LCMe', :path => '../LCMe'#我的相关页面模块
+pod 'LCChat', :path => '../LCChat'#私信模块
+pod 'LCWeb', :path => '../LCWeb'#H5相关模块
+pod 'LCMoment', :path => '../LCMoment'#动态模块
+pod 'LCLaunch', :path => '../LCLaunch'#app启动后处理的模块
+
+pod 'MLCKit/Macro', :git => 'https://github.com/mlcldh/MLCKit.git', :commit => '736fd8e'
+pod 'MLCKit/Category', :git => 'https://github.com/mlcldh/MLCKit.git', :commit => '736fd8e'
 
 end

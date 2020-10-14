@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-    s.prefix_header_contents = '#import "Masonry.h"','#import "UIImageView+YYWebImage.h"','#import "LCMediatorHeader.h"'
+    s.prefix_header_contents = '#import "Masonry.h"','#import "UIImageView+YYWebImage.h"'
 
     s.source_files = 'LCBase/Classes/**/*'
 
@@ -42,7 +42,6 @@ Pod::Spec.new do |s|
    s.dependency 'Masonry', '1.1.0'
    s.dependency 'AFNetworking', '3.2.1'
    s.dependency 'YYWebImage', '1.0.5'
-   s.dependency 'LCMediator'
 #   s.static_framework  =  true
 
   end

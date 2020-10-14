@@ -14,15 +14,15 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'LCLive' do
 
-pod 'LCMediator', :path => '../LCMediator'
-pod 'LCBase', :path => '../LCBase'
-pod 'LCUser', :path => '../LCUser'
-pod 'LCShare', :path => '../LCShare'
-pod 'LCMe', :path => '../LCMe'
-pod 'LCChat', :path => '../LCChat'
-pod 'LCWeb', :path => '../LCWeb'
-pod 'LCMoment', :path => '../LCMoment'
-pod 'LCLaunch', :path => '../LCLaunch'
+pod 'LCMediator', :path => '../LCMediator'#中间件
+pod 'LCBase', :path => '../LCBase'#基础模块
+pod 'LCUser', :path => '../LCUser'#用户信息模块
+pod 'LCShare', :path => '../LCShare'#分享模块
+pod 'LCMe', :path => '../LCMe'#我的相关页面模块
+pod 'LCChat', :path => '../LCChat'#私信模块
+pod 'LCWeb', :path => '../LCWeb'#H5相关模块
+pod 'LCMoment', :path => '../LCMoment'#动态模块
+pod 'LCLaunch', :path => '../LCLaunch'#app启动后处理的模块
 
 end
 ```
@@ -57,11 +57,35 @@ NS_INLINE id LCModuleInstanceFromProtocol(Protocol *protocol) {
     return nil;
 }
 
+//将模块实例赋值到变量module，适合局部代码获取多次模块实例的情况
 #define LCModuleInstance(module,LCModuleProtocol) id<LCModuleProtocol> module = LCModuleInstanceFromProtocol(@protocol(LCModuleProtocol));
+//返回模块实例，适合局部代码获取一次模块实例的情况
 #define LCGetModuleInstance(LCModuleProtocol) ((id<LCModuleProtocol>)(LCModuleInstanceFromProtocol(@protocol(LCModuleProtocol))))
 ```
 
+为了支持Swift代码使用，增加了个LCMediator类，该类内部调用OC的代码，Swift代码可以使用该类获取模块实例。
 
+```objective-c
+/**给Swift代码使用的中间件*/
+@interface LCMediator : NSObject
+
+/**用户信息模块*/
++ (id <LCUserModule>)userModule;
+/**分享模块*/
++ (id <LCShareModule>)shareModule;
+/**H5相关模块*/
++ (id <LCWebModule>)webModule;
+/**私信模块*/
++ (id <LCChatModule>)chatModule;
+/**动态模块*/
++ (id <LCMomentModule>)momentModule;
+/**我的相关页面模块*/
++ (id <LCMeModule>)meModule;
+/**app启动后处理的模块*/
++ (id <LCLaunchModule>)launchModule;
+
+@end
+```
 
 ```objective-c
 /**用户信息模块*/

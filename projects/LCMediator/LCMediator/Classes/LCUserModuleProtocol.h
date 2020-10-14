@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-/**用户信息模块*/
+/**用户信息模块协议*/
 @protocol LCUserModule <NSObject>
 
 /**用户id*/
