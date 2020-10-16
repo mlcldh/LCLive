@@ -1,6 +1,7 @@
-# LCLive
-讲解通过协议实现组件化解耦的直播demo。
-现在是将各个组件代码和主工程放到了一个Git工程里，当然实际应该是放到不同Git工程的。
+# 通过协议实现组件化解耦
+[iOS组件化方案对比](./iOS组件化方案对比.md)
+
+当前的demo现在是将各个组件代码和主工程放到了一个Git仓库里，当然实际应该是放到不同Git仓库的。
 
 主工程依赖这些组件。LCLive是主工程。 LCMediator是调度层中间件。 LCBase是基础模块，封装公共类和方法。LCShare是分享模块。LCUser是用户信息模块。 LCWeb是h5、weex模块。 LCChat是私信模块。 LCMomment是动态模块。LCMe是用户信息展示模块。LCLaunchModule是负责处理app启动后操作的模块。
 
@@ -29,7 +30,7 @@ end
 
 中间件是LCMediator，它里面定义了User、私信、Web、Moment等协议，供相应组件实现和供其他组件调用。
 
-![图片 8](https://raw.github.com/mlcldh/LCLive/master/images/图片8.png)
+![图片 8](./images/LCMediator.jpg)
 
 通过NSClassFromString方法获取到类后，写代码让该类执行类方法时，Xcode不会给提示，毕竟Xcode无法只提供Class这一个类型就判断出具体是那种类。既然不给提示，就要自己将代码复制过去，然后编译也没问题。但如果复制成了其他类方法，只要这个类方法能够引用到，编译就不会报错，这样就会出问题了。这样因为Xcode对类方法编译不够友好，将所有组件协议方法都写成实例方法。
 
@@ -133,10 +134,6 @@ NS_INLINE id LCModuleInstanceFromProtocol(Protocol *protocol) {
 @end
 ```
 
-```objective-c
-_nicknameLabel.text = [LCGetModuleInstance(LCUserModule) nickname];
-```
-
 LCWeb是h5、weex模块。 LCWebModule里面实现协议提供跳转到H5的方法。
 
 ```objective-c
@@ -169,6 +166,19 @@ LCChat是私信模块。LCChatModule提供读取消息未读数和跳转到单�
 }
 
 @end
+```
+
+
+
+```objective-c
+//局部代码获取多次模块实例的情况
+LCModuleInstance(userModule, LCUserModule)
+    NSLog(@"menglc userId: %@, token: %@, nickname: %@, avatarUrlString: %@", userModule.userId, userModule.token, userModule.nickname, userModule.avatarUrlString);
+```
+
+```objective-c
+//局部代码获取一次模块实例的情况
+_nicknameLabel.text = [LCGetModuleInstance(LCUserModule) nickname];
 ```
 
 
